@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Muhammed Yaseen T K // Y//SEC — Systems & Cyber Security Portfolio</title>
+  <title>Muhammed Yaseen T K // Y//SEC — Cybersecurity Student Portfolio</title>
+  <meta name="description" content="Cybersecurity and software development portfolio of Muhammed Yaseen T K — Second-year B.Tech CSE (Cyber Security) student at KMCT IETM (KTU)." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,20 +67,20 @@
       width: 640px;
       height: 640px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, rgba(16, 185, 129, 0.03) 40%, transparent 70%);
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.07) 0%, rgba(16, 185, 129, 0.025) 40%, transparent 70%);
       transform: translate(-50%, -50%);
       pointer-events: none;
       z-index: 1;
       transition: opacity 0.3s ease;
     }
 
-    /* Frosted Argon Glass Cards */
+    /* Frosted Glass Cards */
     .glass-card {
-      background: rgba(11, 17, 29, 0.68);
+      background: rgba(11, 17, 29, 0.72);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
       overflow: hidden;
     }
@@ -88,7 +89,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(56, 189, 248, 0.09), transparent 40%);
+      background: radial-gradient(500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(56, 189, 248, 0.08), transparent 40%);
       opacity: 0;
       transition: opacity 0.3s ease;
       pointer-events: none;
@@ -99,9 +100,9 @@
     }
 
     .glass-card:hover {
-      border-color: rgba(56, 189, 248, 0.38);
-      transform: translateY(-3px);
-      box-shadow: 0 18px 40px -15px rgba(56, 189, 248, 0.16);
+      border-color: rgba(56, 189, 248, 0.35);
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px -15px rgba(56, 189, 248, 0.14);
     }
 
     /* Infinite Marquee */
@@ -113,7 +114,7 @@
     .animate-marquee {
       display: flex;
       width: max-content;
-      animation: marquee 32s linear infinite;
+      animation: marquee 34s linear infinite;
     }
 
     .animate-marquee:hover {
@@ -139,28 +140,28 @@
 </head>
 <body class="selection:bg-cyan-400 selection:text-slate-950">
 
-  <div class="cyber-grid"></div>
-  <div id="spotlight"></div>
+  <div class="cyber-grid" aria-hidden="true"></div>
+  <div id="spotlight" aria-hidden="true"></div>
 
-  <!-- Floating Navigation Header -->
-  <header class="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-6xl z-50 bg-slate-950/80 backdrop-blur-xl border border-white/10 rounded-full px-5 py-3 flex items-center justify-between shadow-2xl">
-    <a href="#home" class="font-mono font-bold text-lg tracking-wider text-white flex items-center gap-1">
+  <!-- Navigation Header -->
+  <header class="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-6xl z-50 bg-slate-950/85 backdrop-blur-xl border border-white/10 rounded-full px-5 py-3 flex items-center justify-between shadow-2xl">
+    <a href="#home" class="font-mono font-bold text-lg tracking-wider text-white flex items-center gap-1 focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded">
       Y<span class="text-cyan-400">//</span>SEC
     </a>
 
-    <nav class="hidden md:flex items-center gap-6 font-mono text-xs tracking-widest text-slate-400">
+    <nav aria-label="Primary Navigation" class="hidden md:flex items-center gap-6 font-mono text-xs tracking-widest text-slate-400">
       <a href="#home" class="hover:text-cyan-400 transition-colors">HOME</a>
-      <a href="#about" class="hover:text-cyan-400 transition-colors">PROFILE</a>
-      <a href="#arsenal" class="hover:text-cyan-400 transition-colors">ARSENAL</a>
-      <a href="#missions" class="hover:text-cyan-400 transition-colors">FEATURED LOGS</a>
-      <a href="#vault" class="hover:text-cyan-400 transition-colors">MASTER ARCHIVE [25]</a>
-      <a href="#timeline" class="hover:text-cyan-400 transition-colors">TIMELINE</a>
+      <a href="#education" class="hover:text-cyan-400 transition-colors">EDUCATION &amp; TRAINING</a>
+      <a href="#missions" class="hover:text-cyan-400 transition-colors">PROJECTS &amp; LABS</a>
+      <a href="#arsenal" class="hover:text-cyan-400 transition-colors">SKILLS</a>
+      <a href="#vault" class="hover:text-cyan-400 transition-colors">REGISTER</a>
+      <a href="#contact" class="hover:text-cyan-400 transition-colors">CONTACT</a>
     </nav>
 
     <div class="flex items-center gap-3">
       <a href="#contact" class="inline-flex items-center gap-2 font-mono text-xs text-emerald-400 bg-emerald-500/10 border border-emerald-500/25 px-3.5 py-1.5 rounded-full hover:bg-emerald-500/20 transition">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-        <span id="ping-display">ONLINE // 12ms</span>
+        <span class="w-2 h-2 rounded-full bg-emerald-400" aria-hidden="true"></span>
+        <span>OPEN TO INTERNSHIPS &amp; PROJECTS</span>
       </a>
     </div>
   </header>
@@ -174,119 +175,122 @@
       <!-- Left Hero Intro -->
       <div class="lg:col-span-7 space-y-6">
         <div class="inline-flex items-center gap-2.5 font-mono text-xs text-cyan-400 bg-cyan-400/10 border border-cyan-400/25 px-3.5 py-1.5 rounded-md">
-          <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
-          [ SYSTEM STATUS: 25 MISSIONS LOGGED &amp; VERIFIED ]
+          <span class="w-2 h-2 rounded-full bg-cyan-400" aria-hidden="true"></span>
+          Cybersecurity Student | Aspiring Security Professional | Ethical Hacking &amp; Security Labs
         </div>
 
-        <h1 class="font-display text-4xl sm:text-6xl font-bold tracking-tight leading-[1.06] text-white">
+        <h1 class="font-display text-4xl sm:text-6xl font-bold tracking-tight leading-[1.08] text-white">
           Exploring &amp; securing the <span class="bg-gradient-to-r from-cyan-400 via-sky-300 to-emerald-400 bg-clip-text text-transparent">digital frontier.</span>
         </h1>
 
-        <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
-          I’m <strong class="text-white font-semibold">Muhammed Yaseen T K</strong> — a B.Tech Computer Science &amp; Cyber Security student, offensive/defensive lab researcher, and Founder &amp; CEO of <strong class="text-cyan-400 font-semibold">Hexetra</strong>. From low-level Linux privilege escalation and SIEM forensics to full-stack PHP/MySQL and Flutter architectures, I build systems and test how they break.
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+          I'm <strong class="text-white font-semibold">Muhammed Yaseen T K</strong> — a second-year Computer Science and Engineering student specializing in Cyber Security, developing practical skills through security labs, network and web application testing, Linux environments, and technical projects.
         </p>
 
-        <div class="flex flex-wrap gap-3.5 pt-2">
+        <div class="flex flex-wrap gap-3.5 pt-1">
           <a href="#missions" class="font-mono text-xs font-bold bg-cyan-400 hover:bg-cyan-300 text-slate-950 px-6 py-3.5 rounded-lg shadow-lg shadow-cyan-400/20 transition transform hover:-translate-y-0.5">
-            PRIORITY MISSION LOGS ↓
+            VIEW LABS &amp; PROJECTS ↓
           </a>
-          <a href="#vault" class="font-mono text-xs font-medium bg-slate-900/90 hover:bg-slate-800 text-cyan-400 border border-cyan-400/30 px-6 py-3.5 rounded-lg transition transform hover:-translate-y-0.5">
-            25-PROJECT REGISTER ⊞
+          <a href="#education" class="font-mono text-xs font-medium bg-slate-900/90 hover:bg-slate-800 text-cyan-400 border border-cyan-400/30 px-6 py-3.5 rounded-lg transition transform hover:-translate-y-0.5">
+            EDUCATION &amp; TRAINING
           </a>
           <a href="#contact" class="font-mono text-xs font-medium bg-slate-900/80 hover:border-white/30 text-slate-200 border border-white/10 px-5 py-3.5 rounded-lg transition">
-            CONNECT ↗
+            ESTABLISH CONNECTION ↗
           </a>
         </div>
 
-        <!-- Quick Status Bar -->
-        <div class="pt-4 grid grid-cols-3 gap-4 border-t border-white/10 max-w-lg font-mono text-xs">
-          <div>
-            <span class="text-slate-500 block text-[10px]">RED / BLUE TEAM</span>
-            <span class="text-slate-200 font-semibold">DC-2 · Sysmon · Splunk</span>
+        <!-- Compact Information Area -->
+        <div class="pt-5 grid grid-cols-1 sm:grid-cols-2 gap-3 border-t border-white/10 max-w-2xl font-mono text-xs">
+          <div class="bg-slate-900/60 border border-white/10 rounded-lg p-3">
+            <span class="text-slate-400 block text-[10px] uppercase">ACADEMIC DEGREE</span>
+            <span class="text-white font-medium">B.Tech CSE (Cyber Security) — 2nd Year</span>
           </div>
-          <div>
-            <span class="text-slate-500 block text-[10px]">SOFTWARE &amp; IOT</span>
-            <span class="text-emerald-400 font-semibold">PHP · Flutter · Arduino</span>
+          <div class="bg-slate-900/60 border border-amber-400/25 rounded-lg p-3">
+            <span class="text-amber-400 block text-[10px] uppercase">SECURITY TRAINING</span>
+            <span class="text-slate-200 font-medium">OCSP — In Progress (Exp. Nov 2026)</span>
           </div>
-          <div>
-            <span class="text-slate-500 block text-[10px]">VENTURE</span>
-            <span class="text-cyan-400 font-semibold">Hexetra Digital</span>
+          <div class="bg-slate-900/60 border border-white/10 rounded-lg p-3">
+            <span class="text-cyan-400 block text-[10px] uppercase">PRACTICAL FOCUS</span>
+            <span class="text-slate-200 font-medium">Hands-on Cybersecurity Labs (Red &amp; Blue)</span>
+          </div>
+          <div class="bg-slate-900/60 border border-white/10 rounded-lg p-3">
+            <span class="text-emerald-400 block text-[10px] uppercase">ENGINEERING</span>
+            <span class="text-slate-200 font-medium">Programming &amp; Full-Stack Development</span>
           </div>
         </div>
       </div>
 
-      <!-- Right Column: Identity Card + Interactive Security Shell -->
+      <!-- Right Column: Student Profile Card + Interactive Portfolio Shell -->
       <div class="lg:col-span-5">
         <div class="glass-card rounded-2xl p-5 sm:p-6 shadow-2xl border border-white/10">
           <!-- Top Bar -->
           <div class="flex items-center justify-between font-mono text-[11px] text-slate-400 pb-3.5 mb-4 border-b border-white/10">
             <span class="flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
-              IDENTITY // VERIFIED
+              <span class="w-2 h-2 rounded-full bg-cyan-400" aria-hidden="true"></span>
+              STUDENT PROFILE // SUMMARY
             </span>
-            <span class="text-cyan-400">CLEARANCE // LVL-04</span>
+            <span class="text-cyan-400">KTU // 2ND YEAR</span>
           </div>
 
           <!-- Profile Row -->
           <div class="flex items-center gap-4 mb-5">
             <div class="relative w-20 h-20 rounded-xl overflow-hidden border border-cyan-400/40 bg-slate-900 flex items-center justify-center shrink-0 shadow-inner">
               <img 
-                src="https://hexetraonline.github.io/yaseen-portfolio/assets/images/yaseen-profile.png" 
+                src="assets/images/yaseen-profile.png" 
                 alt="Muhammed Yaseen T K" 
                 class="w-full h-full object-cover"
                 onerror="this.style.display='none'; document.getElementById('avatar-fallback').classList.remove('hidden');"
               />
               <div id="avatar-fallback" class="hidden font-mono font-bold text-xl text-cyan-400">MY</div>
-              <span class="absolute bottom-1 right-1 bg-slate-950/90 border border-cyan-400/40 font-mono text-[9px] text-cyan-300 px-1.5 py-0.5 rounded">SEC//01</span>
             </div>
 
             <div>
               <h2 class="font-display text-xl font-bold text-white tracking-tight">MUHAMMED YASEEN T K</h2>
-              <p class="font-mono text-xs text-cyan-400 mb-2">CSE (CYBER SECURITY) // CEO @ HEXETRA</p>
+              <p class="font-mono text-xs text-cyan-400 mb-2">B.TECH CSE (CYBER SECURITY) STUDENT</p>
               <div class="flex flex-wrap gap-1.5">
-                <span class="font-mono text-[10px] bg-white/5 border border-white/10 px-2 py-0.5 rounded text-slate-300">Red/Blue Labs</span>
-                <span class="font-mono text-[10px] bg-white/5 border border-white/10 px-2 py-0.5 rounded text-slate-300">Full-Stack</span>
-                <span class="font-mono text-[10px] bg-white/5 border border-white/10 px-2 py-0.5 rounded text-slate-300">Hardware IoT</span>
+                <span class="font-mono text-[10px] bg-white/5 border border-white/10 px-2 py-0.5 rounded text-slate-300">KMCT IETM (KTU)</span>
+                <span class="font-mono text-[10px] bg-amber-400/10 border border-amber-400/30 px-2 py-0.5 rounded text-amber-300">OCSP Trainee</span>
+                <span class="font-mono text-[10px] bg-white/5 border border-white/10 px-2 py-0.5 rounded text-slate-300">Hexetra</span>
               </div>
             </div>
           </div>
 
-          <!-- Interactive Terminal Emulator -->
+          <!-- Interactive Portfolio Navigation Shell (Safe DOM Construction) -->
           <div class="bg-[#04070e] border border-white/10 rounded-xl p-3.5 font-mono text-xs shadow-inner">
             <div class="flex items-center justify-between text-[11px] text-slate-500 pb-2.5 mb-2.5 border-b border-white/5">
-              <div class="flex items-center gap-1.5">
+              <div class="flex items-center gap-1.5" aria-hidden="true">
                 <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
                 <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
                 <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
               </div>
-              <span>~/yaseen-sec-shell — bash</span>
+              <span>~/portfolio-helper — interactive</span>
             </div>
 
             <!-- Quick Command Chips -->
-            <div class="flex flex-wrap gap-1.5 mb-3">
-              <button onclick="runShellCmd('help')" class="text-[10px] bg-cyan-400/10 hover:bg-cyan-400/20 text-cyan-300 border border-cyan-400/20 px-2 py-0.5 rounded transition">help</button>
-              <button onclick="runShellCmd('dc2')" class="text-[10px] bg-rose-400/10 hover:bg-rose-400/20 text-rose-300 border border-rose-400/20 px-2 py-0.5 rounded transition">dc2_pentest</button>
-              <button onclick="runShellCmd('sysmon')" class="text-[10px] bg-cyan-400/10 hover:bg-cyan-400/20 text-cyan-300 border border-cyan-400/20 px-2 py-0.5 rounded transition">sysmon</button>
-              <button onclick="runShellCmd('akshaya')" class="text-[10px] bg-emerald-400/10 hover:bg-emerald-400/20 text-emerald-300 border border-emerald-400/20 px-2 py-0.5 rounded transition">akshaya</button>
-              <button onclick="runShellCmd('hexetra')" class="text-[10px] bg-cyan-400/10 hover:bg-cyan-400/20 text-cyan-300 border border-cyan-400/20 px-2 py-0.5 rounded transition">hexetra</button>
-              <button onclick="runShellCmd('clear')" class="text-[10px] bg-white/5 hover:bg-white/10 text-slate-400 border border-white/10 px-2 py-0.5 rounded transition">clear</button>
+            <div class="flex flex-wrap gap-1.5 mb-3" role="group" aria-label="Terminal quick commands">
+              <button type="button" onclick="runShellCmd('help')" class="text-[10px] bg-cyan-400/10 hover:bg-cyan-400/20 text-cyan-300 border border-cyan-400/20 px-2 py-0.5 rounded transition">help</button>
+              <button type="button" onclick="runShellCmd('education')" class="text-[10px] bg-cyan-400/10 hover:bg-cyan-400/20 text-cyan-300 border border-cyan-400/20 px-2 py-0.5 rounded transition">education</button>
+              <button type="button" onclick="runShellCmd('ocsp')" class="text-[10px] bg-amber-400/10 hover:bg-amber-400/20 text-amber-300 border border-amber-400/20 px-2 py-0.5 rounded transition">ocsp</button>
+              <button type="button" onclick="runShellCmd('labs')" class="text-[10px] bg-emerald-400/10 hover:bg-emerald-400/20 text-emerald-300 border border-emerald-400/20 px-2 py-0.5 rounded transition">labs</button>
+              <button type="button" onclick="runShellCmd('projects')" class="text-[10px] bg-cyan-400/10 hover:bg-cyan-400/20 text-cyan-300 border border-cyan-400/20 px-2 py-0.5 rounded transition">projects</button>
+              <button type="button" onclick="runShellCmd('clear')" class="text-[10px] bg-white/5 hover:bg-white/10 text-slate-400 border border-white/10 px-2 py-0.5 rounded transition">clear</button>
             </div>
 
             <!-- Terminal Output Log -->
-            <div id="term-log" class="h-40 overflow-y-auto space-y-1.5 text-slate-300 pr-1">
-              <div><span class="text-emerald-400">root@yaseen:~$</span> <span class="text-white">whoami</span></div>
-              <div class="text-slate-400 pl-2">muhammed_yaseen_tk // B.Tech CSE (Cyber Security) &amp; Founder @ Hexetra</div>
-              <div><span class="text-emerald-400">root@yaseen:~$</span> <span class="text-white">ls ./master_portfolio</span></div>
-              <div class="text-cyan-400 pl-2">25 Total Records: 6 Priority Showcases · 5 Cyber Labs · 6 Full-Stack Apps · 3 Event Systems</div>
+            <div id="term-log" class="h-40 overflow-y-auto space-y-1.5 text-slate-300 pr-1" aria-live="polite">
+              <div><span class="text-emerald-400">yaseen@portfolio:~$</span> <span class="text-white">whoami</span></div>
+              <div class="text-slate-400 pl-2">Second-year B.Tech CSE (Cyber Security) student at KMCT IETM (KTU).</div>
+              <div><span class="text-emerald-400">yaseen@portfolio:~$</span> <span class="text-white">status</span></div>
+              <div class="text-cyan-400 pl-2">Building practical skills via authorized security labs, OCSP training (In Progress), and software/hardware projects.</div>
             </div>
 
             <!-- Terminal Input -->
             <form id="term-form" class="mt-2.5 pt-2 border-t border-white/10 flex items-center gap-2" autocomplete="off">
-              <span class="text-emerald-400 shrink-0">root@yaseen:~$</span>
+              <label for="term-input" class="text-emerald-400 shrink-0">yaseen@portfolio:~$</label>
               <input 
                 id="term-input" 
                 type="text" 
-                placeholder="Type 'help', 'dc2', 'sysmon', 'akshaya', 'rfid'..." 
+                placeholder="Type 'help', 'education', 'ocsp', 'labs', 'projects'..." 
                 class="bg-transparent text-cyan-300 placeholder-slate-600 focus:outline-none w-full text-xs"
               />
             </form>
@@ -298,497 +302,515 @@
   </main>
 
   <!-- SKILLS TICKER -->
-  <div class="border-y border-white/10 bg-slate-950/90 py-3.5 overflow-hidden relative z-10">
+  <div class="border-y border-white/10 bg-slate-950/90 py-3.5 overflow-hidden relative z-10" aria-label="Core Focus Areas">
     <div class="animate-marquee font-mono text-xs tracking-widest text-slate-400">
-      <span class="mx-6">KALI LINUX &amp; PRIVESC <span class="text-cyan-400 ml-6">✦</span></span>
-      <span class="mx-6">WINDOWS SYSMON FORENSICS <span class="text-cyan-400 ml-6">✦</span></span>
-      <span class="mx-6">SPLUNK SIEM TELEMETRY <span class="text-cyan-400 ml-6">✦</span></span>
-      <span class="mx-6">PHP &amp; MYSQL ARCHITECTURE <span class="text-cyan-400 ml-6">✦</span></span>
-      <span class="mx-6">FLUTTER &amp; CLOUD FIRESTORE <span class="text-cyan-400 ml-6">✦</span></span>
-      <span class="mx-6">ARDUINO UNO &amp; MFRC522 RFID <span class="text-cyan-400 ml-6">✦</span></span>
-      <span class="mx-6">WEB APP SECURITY (bWAPP / DVWA) <span class="text-cyan-400 ml-6">✦</span></span>
-      <span class="mx-6">HEXETRA DIGITAL SOLUTIONS <span class="text-cyan-400 ml-6">✦</span></span>
+      <span class="mx-6">B.TECH CSE (CYBER SECURITY) <span class="text-cyan-400 ml-6">✦</span></span>
+      <span class="mx-6">AUTHORIZED PENETRATION TESTING LABS <span class="text-cyan-400 ml-6">✦</span></span>
+      <span class="mx-6">WINDOWS SYSMON EVENT LOG ANALYSIS <span class="text-cyan-400 ml-6">✦</span></span>
+      <span class="mx-6">SPLUNK SIEM MONITORING PRACTICE <span class="text-cyan-400 ml-6">✦</span></span>
+      <span class="mx-6">PHP &amp; MYSQL WEB DEVELOPMENT <span class="text-cyan-400 ml-6">✦</span></span>
+      <span class="mx-6">ARDUINO RFID ACCESS CONTROL <span class="text-cyan-400 ml-6">✦</span></span>
+      <span class="mx-6">LINUX &amp; PRIVILEGE ESCALATION LABS <span class="text-cyan-400 ml-6">✦</span></span>
       <!-- Duplicate for seamless loop -->
-      <span class="mx-6">KALI LINUX &amp; PRIVESC <span class="text-cyan-400 ml-6">✦</span></span>
-      <span class="mx-6">WINDOWS SYSMON FORENSICS <span class="text-cyan-400 ml-6">✦</span></span>
-      <span class="mx-6">SPLUNK SIEM TELEMETRY <span class="text-cyan-400 ml-6">✦</span></span>
-      <span class="mx-6">PHP &amp; MYSQL ARCHITECTURE <span class="text-cyan-400 ml-6">✦</span></span>
-      <span class="mx-6">FLUTTER &amp; CLOUD FIRESTORE <span class="text-cyan-400 ml-6">✦</span></span>
-      <span class="mx-6">ARDUINO UNO &amp; MFRC522 RFID <span class="text-cyan-400 ml-6">✦</span></span>
-      <span class="mx-6">WEB APP SECURITY (bWAPP / DVWA) <span class="text-cyan-400 ml-6">✦</span></span>
-      <span class="mx-6">HEXETRA DIGITAL SOLUTIONS <span class="text-cyan-400 ml-6">✦</span></span>
+      <span class="mx-6" aria-hidden="true">B.TECH CSE (CYBER SECURITY) <span class="text-cyan-400 ml-6">✦</span></span>
+      <span class="mx-6" aria-hidden="true">AUTHORIZED PENETRATION TESTING LABS <span class="text-cyan-400 ml-6">✦</span></span>
+      <span class="mx-6" aria-hidden="true">WINDOWS SYSMON EVENT LOG ANALYSIS <span class="text-cyan-400 ml-6">✦</span></span>
+      <span class="mx-6" aria-hidden="true">SPLUNK SIEM MONITORING PRACTICE <span class="text-cyan-400 ml-6">✦</span></span>
+      <span class="mx-6" aria-hidden="true">PHP &amp; MYSQL WEB DEVELOPMENT <span class="text-cyan-400 ml-6">✦</span></span>
+      <span class="mx-6" aria-hidden="true">ARDUINO RFID ACCESS CONTROL <span class="text-cyan-400 ml-6">✦</span></span>
+      <span class="mx-6" aria-hidden="true">LINUX &amp; PRIVILEGE ESCALATION LABS <span class="text-cyan-400 ml-6">✦</span></span>
     </div>
   </div>
 
   <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
 
-    <!-- 01 // PROFILE -->
-    <section id="about" class="py-24">
-      <div class="font-mono text-xs text-cyan-400 tracking-widest uppercase mb-2">01 // PROFILE &amp; PHILOSOPHY</div>
+    <!-- 01 // EDUCATION & FORMAL TRAINING -->
+    <section id="education" class="py-24">
+      <div class="font-mono text-xs text-cyan-400 tracking-widest uppercase mb-2">01 // ACADEMIC EDUCATION &amp; SECURITY TRAINING</div>
       <h2 class="font-display text-3xl sm:text-5xl font-bold text-white mb-10">
-        Curious by nature. <span class="text-cyan-400">Builder by choice.</span>
+        Formal education &amp; <span class="text-cyan-400">current training.</span>
       </h2>
 
-      <div class="grid lg:grid-cols-12 gap-6">
-        <div class="lg:col-span-7 glass-card rounded-2xl p-6 sm:p-8 space-y-4 text-slate-300 leading-relaxed">
-          <p>
-            Technology is far more compelling when you understand what happens underneath the interface — from restricted Linux shells and Windows Sysmon event logs to normalized MySQL schemas and embedded microcontroller buses.
-          </p>
-          <p>
-            My work spans two complementary worlds: <strong class="text-white">engineering practical production systems</strong> (like <em>Akshaya@Doorstep</em>, <em>TransitBridge</em>, and client deployments through <strong class="text-cyan-400">Hexetra</strong>) and <strong class="text-white">conducting offensive &amp; defensive security investigations</strong> (escaping restricted shells in <em>DC-2</em>, hunting malicious Event IDs in <em>Sysmon</em>, and configuring <em>Splunk SIEM</em> pipelines).
-          </p>
-          <p>
-            Every project — whether software, hardware, or security — is built to understand how real-world systems operate, where they fail, and how to harden them.
-          </p>
-        </div>
-
-        <div class="lg:col-span-5 glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+      <div class="grid lg:grid-cols-2 gap-6 mb-10">
+        
+        <!-- Card 1: University Degree -->
+        <article class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between border border-white/10">
           <div>
-            <span class="font-mono text-xs text-emerald-400 uppercase tracking-wider block mb-1">// OPERATIONAL SNAPSHOT</span>
-            <h3 class="font-display text-2xl font-bold text-white mb-5">Portfolio Breakdown</h3>
+            <div class="flex flex-wrap items-center justify-between gap-2 font-mono text-xs mb-4">
+              <span class="text-cyan-400 bg-cyan-400/10 border border-cyan-400/25 px-3 py-1 rounded">UNIVERSITY DEGREE</span>
+              <span class="text-emerald-400 bg-emerald-400/10 border border-emerald-400/25 px-3 py-1 rounded">CURRENTLY ENROLLED // 2ND YEAR</span>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-white mb-1">
+              B.Tech in Computer Science &amp; Engineering (Cyber Security)
+            </h3>
+            <p class="font-mono text-xs text-cyan-300 mb-4">
+              KMCT Institute of Emerging Technology and Management · Affiliated with APJ Abdul Kalam Technological University (KTU)
+            </p>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Pursuing undergraduate engineering coursework in computer science fundamentals, programming in C/C++/Python, data structures, operating systems, computer networks, and cybersecurity specialization subjects (2025 – Present).
+            </p>
           </div>
+          <div class="pt-4 border-t border-white/10 flex flex-wrap gap-2 font-mono text-[11px] text-slate-400">
+            <span class="bg-white/5 px-2.5 py-1 rounded">APJ Abdul Kalam Technological University (KTU)</span>
+            <span class="bg-white/5 px-2.5 py-1 rounded">CSE (Cyber Security)</span>
+          </div>
+        </article>
 
-          <div class="grid grid-cols-2 gap-3.5">
-            <div class="bg-slate-900/70 border border-white/10 rounded-xl p-4">
-              <span class="font-display text-2xl font-bold text-cyan-400 block">11+</span>
-              <span class="font-mono text-[11px] text-slate-400">RED/BLUE LABS &amp; SEC EVENTS</span>
+        <!-- Card 2: Offenso Hackers Academy (OCSP - In Progress) -->
+        <article class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between border border-amber-400/30">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-2 font-mono text-xs mb-4">
+              <span class="text-amber-300 bg-amber-400/10 border border-amber-400/30 px-3 py-1 rounded">PROFESSIONAL TRAINING PROGRAM</span>
+              <span class="text-amber-300 bg-amber-400/10 border border-amber-400/30 px-3 py-1 rounded">IN PROGRESS — EXP. NOV 2026</span>
             </div>
-            <div class="bg-slate-900/70 border border-white/10 rounded-xl p-4">
-              <span class="font-display text-2xl font-bold text-emerald-400 block">8+</span>
-              <span class="font-mono text-[11px] text-slate-400">WEB, MOBILE &amp; CIVIC SYSTEMS</span>
-            </div>
-            <div class="bg-slate-900/70 border border-white/10 rounded-xl p-4">
-              <span class="font-display text-2xl font-bold text-white block">HEXETRA</span>
-              <span class="font-mono text-[11px] text-slate-400">DIGITAL AGENCY &amp; BRANDING</span>
-            </div>
-            <div class="bg-slate-900/70 border border-white/10 rounded-xl p-4">
-              <span class="font-display text-2xl font-bold text-amber-400 block">IoT / C++</span>
-              <span class="font-mono text-[11px] text-slate-400">ARDUINO UNO &amp; ESP32 LABS</span>
-            </div>
+            <h3 class="font-display text-2xl font-bold text-white mb-1">
+              Offenso Certified Security Professional (OCSP)
+            </h3>
+            <p class="font-mono text-xs text-amber-300 mb-4">
+              Offenso Hackers Academy · Status: In Progress (Expected Completion: November 2026)
+            </p>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Currently enrolled in structured cybersecurity training covering offensive and defensive security fundamentals, networking, penetration-testing concepts, Linux environments, and practical lab exercises.
+            </p>
+            <p class="font-mono text-[11px] text-slate-400 bg-slate-950/70 border border-white/10 p-3 rounded-lg mb-4">
+              Note: Coursework and lab modules are currently in progress. Listed as ongoing training rather than a completed certification until course completion.
+            </p>
           </div>
-        </div>
+          <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-3">
+            <span class="font-mono text-[11px] text-slate-400">Expected Completion: November 2026</span>
+            <a 
+              href="https://offensoacademy.com/courses/offenso-certified-security-professional/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="font-mono text-xs text-cyan-400 hover:underline inline-flex items-center gap-1"
+            >
+              Official Program Syllabus ↗
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- About & Learning Approach -->
+      <div class="glass-card rounded-2xl p-6 sm:p-8 text-slate-300 text-sm sm:text-base leading-relaxed space-y-3">
+        <div class="font-mono text-xs text-emerald-400 uppercase tracking-wider">// MY APPROACH TO LEARNING &amp; BUILDING</div>
+        <p>
+          Technology is most rewarding when you understand how systems operate underneath the interface. I learn by experimenting across authorized security labs, Linux virtual machines, Windows event logs, relational databases, and Arduino hardware circuits.
+        </p>
+        <p>
+          Every lab or software project is an opportunity to study how systems are built, how misconfigurations happen, and how to document and improve them methodically.
+        </p>
       </div>
     </section>
 
-    <!-- 02 // DIGITAL ARSENAL -->
-    <section id="arsenal" class="py-20 border-t border-white/10">
-      <div class="font-mono text-xs text-cyan-400 tracking-widest uppercase mb-2">02 // DIGITAL ARSENAL</div>
-      <h2 class="font-display text-3xl sm:text-5xl font-bold text-white mb-10">
-        Tools &amp; stacks I <span class="text-cyan-400">deploy.</span>
-      </h2>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        <!-- Card 1 -->
-        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between">
-          <div>
-            <span class="font-mono text-xs text-rose-400 block mb-2">01 // OFFENSIVE &amp; BLUE TEAM</span>
-            <h3 class="font-display text-xl font-bold text-white mb-2">Cyber Security</h3>
-            <p class="text-sm text-slate-400 mb-5">Linux enumeration, restricted shell escape, privilege escalation, Windows Event/Sysmon forensics, and SIEM monitoring.</p>
-          </div>
-          <div class="flex flex-wrap gap-1.5">
-            <span class="font-mono text-[10px] bg-rose-400/10 text-rose-300 border border-rose-400/25 px-2.5 py-1 rounded">KALI LINUX</span>
-            <span class="font-mono text-[10px] bg-cyan-400/10 text-cyan-300 border border-cyan-400/20 px-2.5 py-1 rounded">SYSMON (EVTX)</span>
-            <span class="font-mono text-[10px] bg-cyan-400/10 text-cyan-300 border border-cyan-400/20 px-2.5 py-1 rounded">SPLUNK SIEM</span>
-            <span class="font-mono text-[10px] bg-cyan-400/10 text-cyan-300 border border-cyan-400/20 px-2.5 py-1 rounded">POWERSHELL</span>
-            <span class="font-mono text-[10px] bg-cyan-400/10 text-cyan-300 border border-cyan-400/20 px-2.5 py-1 rounded">bWAPP / VulnBank</span>
-          </div>
-        </article>
-
-        <!-- Card 2 -->
-        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between">
-          <div>
-            <span class="font-mono text-xs text-cyan-400 block mb-2">02 // FULL-STACK SYSTEMS</span>
-            <h3 class="font-display text-xl font-bold text-white mb-2">Web &amp; Database</h3>
-            <p class="text-sm text-slate-400 mb-5">Role-based service centre platforms, audit-logged MySQL databases, QR workflows, and responsive client websites.</p>
-          </div>
-          <div class="flex flex-wrap gap-1.5">
-            <span class="font-mono text-[10px] bg-cyan-400/10 text-cyan-300 border border-cyan-400/20 px-2.5 py-1 rounded">PHP</span>
-            <span class="font-mono text-[10px] bg-cyan-400/10 text-cyan-300 border border-cyan-400/20 px-2.5 py-1 rounded">MYSQL</span>
-            <span class="font-mono text-[10px] bg-cyan-400/10 text-cyan-300 border border-cyan-400/20 px-2.5 py-1 rounded">JAVASCRIPT</span>
-            <span class="font-mono text-[10px] bg-cyan-400/10 text-cyan-300 border border-cyan-400/20 px-2.5 py-1 rounded">HTML5 / CSS3</span>
-            <span class="font-mono text-[10px] bg-cyan-400/10 text-cyan-300 border border-cyan-400/20 px-2.5 py-1 rounded">APACHE / LINUX</span>
-          </div>
-        </article>
-
-        <!-- Card 3 -->
-        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between">
-          <div>
-            <span class="font-mono text-xs text-emerald-400 block mb-2">03 // MOBILE &amp; MODERN STACK</span>
-            <h3 class="font-display text-xl font-bold text-white mb-2">App &amp; Cloud</h3>
-            <p class="text-sm text-slate-400 mb-5">Real-time transit tracking, Firestore synchronization, Google Maps APIs, and modern React/Node architectures.</p>
-          </div>
-          <div class="flex flex-wrap gap-1.5">
-            <span class="font-mono text-[10px] bg-emerald-400/10 text-emerald-300 border border-emerald-400/20 px-2.5 py-1 rounded">FLUTTER</span>
-            <span class="font-mono text-[10px] bg-emerald-400/10 text-emerald-300 border border-emerald-400/20 px-2.5 py-1 rounded">FIREBASE / FIRESTORE</span>
-            <span class="font-mono text-[10px] bg-emerald-400/10 text-emerald-300 border border-emerald-400/20 px-2.5 py-1 rounded">GOOGLE MAPS API</span>
-            <span class="font-mono text-[10px] bg-emerald-400/10 text-emerald-300 border border-emerald-400/20 px-2.5 py-1 rounded">REACT / NODE</span>
-          </div>
-        </article>
-
-        <!-- Card 4 -->
-        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between">
-          <div>
-            <span class="font-mono text-xs text-amber-400 block mb-2">04 // EMBEDDED &amp; HARDWARE</span>
-            <h3 class="font-display text-xl font-bold text-white mb-2">Hardware &amp; IoT</h3>
-            <p class="text-sm text-slate-400 mb-5">Microcontroller programming, RFID cryptographic access control, keypad override circuits, and sensor peripherals.</p>
-          </div>
-          <div class="flex flex-wrap gap-1.5">
-            <span class="font-mono text-[10px] bg-amber-400/10 text-amber-300 border border-amber-400/20 px-2.5 py-1 rounded">ARDUINO UNO R3</span>
-            <span class="font-mono text-[10px] bg-amber-400/10 text-amber-300 border border-amber-400/20 px-2.5 py-1 rounded">C / C++</span>
-            <span class="font-mono text-[10px] bg-amber-400/10 text-amber-300 border border-amber-400/20 px-2.5 py-1 rounded">MFRC522 RFID</span>
-            <span class="font-mono text-[10px] bg-amber-400/10 text-amber-300 border border-amber-400/20 px-2.5 py-1 rounded">LIQUIDCRYSTAL_I2C</span>
-            <span class="font-mono text-[10px] bg-amber-400/10 text-amber-300 border border-amber-400/20 px-2.5 py-1 rounded">ESP32</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- 03 // PRIORITY MISSION LOGS (DEEP TECHNICAL SHOWCASES) -->
+    <!-- 02 // CYBERSECURITY LABS & SOFTWARE PROJECTS -->
     <section id="missions" class="py-20 border-t border-white/10">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
         <div>
-          <div class="font-mono text-xs text-cyan-400 tracking-widest uppercase mb-2">03 // PRIORITY MISSION LOGS</div>
+          <div class="font-mono text-xs text-cyan-400 tracking-widest uppercase mb-2">02 // HANDS-ON LABS &amp; PROJECTS</div>
           <h2 class="font-display text-3xl sm:text-5xl font-bold text-white">
-            Flagship <span class="text-cyan-400">builds &amp; investigations.</span>
+            Practical work &amp; <span class="text-cyan-400">technical labs.</span>
           </h2>
+          <p class="text-slate-400 text-sm mt-2 max-w-2xl">
+            Prioritizing documented cybersecurity lab exercises, hardware access-control builds, and web/mobile applications. Authorized lab exercises are clearly marked as training environments.
+          </p>
         </div>
 
-        <!-- Interactive Category Filter -->
-        <div class="flex flex-wrap gap-2 font-mono text-xs" id="mission-filters">
-          <button onclick="filterMissions('all')" data-filter="all" class="filter-btn bg-cyan-400 text-slate-950 font-bold px-3.5 py-2 rounded-lg transition">ALL [12]</button>
-          <button onclick="filterMissions('sec')" data-filter="sec" class="filter-btn bg-slate-900 text-slate-300 border border-white/10 hover:border-cyan-400/40 px-3.5 py-2 rounded-lg transition">CYBER SEC &amp; LABS [6]</button>
-          <button onclick="filterMissions('dev')" data-filter="dev" class="filter-btn bg-slate-900 text-slate-300 border border-white/10 hover:border-cyan-400/40 px-3.5 py-2 rounded-lg transition">SOFTWARE &amp; WEB [5]</button>
-          <button onclick="filterMissions('iot')" data-filter="iot" class="filter-btn bg-slate-900 text-slate-300 border border-white/10 hover:border-cyan-400/40 px-3.5 py-2 rounded-lg transition">HARDWARE IoT [1]</button>
+        <!-- Category Filter -->
+        <div class="flex flex-wrap gap-2 font-mono text-xs" id="mission-filters" role="group" aria-label="Filter projects by category">
+          <button type="button" onclick="filterMissions('all')" data-filter="all" class="filter-btn bg-cyan-400 text-slate-950 font-bold px-3.5 py-2 rounded-lg transition">ALL [7]</button>
+          <button type="button" onclick="filterMissions('sec')" data-filter="sec" class="filter-btn bg-slate-900 text-slate-300 border border-white/10 hover:border-cyan-400/40 px-3.5 py-2 rounded-lg transition">SECURITY LABS [3]</button>
+          <button type="button" onclick="filterMissions('iot')" data-filter="iot" class="filter-btn bg-slate-900 text-slate-300 border border-white/10 hover:border-cyan-400/40 px-3.5 py-2 rounded-lg transition">HARDWARE SEC [1]</button>
+          <button type="button" onclick="filterMissions('dev')" data-filter="dev" class="filter-btn bg-slate-900 text-slate-300 border border-white/10 hover:border-cyan-400/40 px-3.5 py-2 rounded-lg transition">SOFTWARE &amp; WEB [3]</button>
         </div>
       </div>
 
-      <!-- Mission Cards Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="missions-grid">
+      <!-- Structured Project Cards Grid -->
+      <div class="grid md:grid-cols-2 gap-6" id="missions-grid">
 
-        <!-- 1. Akshaya@Doorstep -->
-        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between mission-item" data-category="dev">
-          <div>
-            <div class="flex items-center justify-between font-mono text-[11px] mb-3">
-              <span class="text-emerald-400 bg-emerald-400/10 border border-emerald-400/25 px-2.5 py-0.5 rounded">PRIORITY_01 // FULL-STACK</span>
-              <span class="text-slate-400">ACTIVE DEV</span>
-            </div>
-            <h3 class="font-display text-xl font-bold text-white mb-2">Akshaya@Doorstep</h3>
-            <p class="text-sm text-slate-400 mb-4">
-              Full-stack PHP &amp; MySQL Digital Service Centre Management System handling both office visits and doorstep citizen service operations, financial ledgers, and audit logs.
-            </p>
-          </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">PHP / MySQL</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">RBAC Auth</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">Audit Logs</span>
-            </div>
-            <button onclick="openModal('akshaya')" class="w-full font-mono text-xs text-cyan-400 hover:text-slate-950 hover:bg-cyan-400 border border-cyan-400/30 py-2.5 rounded-lg transition">
-              Inspect Architecture Dossier →
-            </button>
-          </div>
-        </article>
-
-        <!-- 2. DC-2 Penetration Testing -->
+        <!-- 1. DC-2 Penetration-Testing Lab -->
         <article class="glass-card rounded-2xl p-6 flex flex-col justify-between mission-item" data-category="sec">
           <div>
             <div class="flex items-center justify-between font-mono text-[11px] mb-3">
-              <span class="text-rose-400 bg-rose-400/10 border border-rose-400/25 px-2.5 py-0.5 rounded">PRIORITY_02 // RED TEAM</span>
-              <span class="text-emerald-400">COMPLETED</span>
+              <span class="text-cyan-400 bg-cyan-400/10 border border-cyan-400/25 px-2.5 py-1 rounded">AUTHORIZED LAB // OFFENSIVE SECURITY</span>
+              <span class="text-emerald-400 bg-emerald-400/10 border border-emerald-400/25 px-2.5 py-1 rounded">STATUS: COMPLETED</span>
             </div>
-            <h3 class="font-display text-xl font-bold text-white mb-2">DC-2 Penetration Test</h3>
-            <p class="text-sm text-slate-400 mb-4">
-              End-to-end vulnerable machine compromise on Kali Linux: bypassed restricted rbash shell, audited sudoers, exploited misconfigured Git binary for root escalation, and captured flag3 &amp; flag4.
-            </p>
+            <h3 class="font-display text-2xl font-bold text-white mb-3">1. DC-2 Vulnerable Machine Penetration-Testing Lab</h3>
+            
+            <dl class="space-y-2.5 text-xs sm:text-sm text-slate-300 mb-5">
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">Objective</dt>
+                <dd>Perform an authorized penetration test against the intentionally vulnerable DC-2 virtual machine to practice enumeration, restricted shell escape, and Linux privilege escalation.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">Environment &amp; Tools</dt>
+                <dd>Kali Linux, DC-2 vulnerable lab VM, local virtual network, SSH, rbash, Git, Linux CLI utilities.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">What I Personally Did</dt>
+                <dd>Enumerated the target environment, navigated and bypassed a restricted shell (<code class="text-cyan-300">rbash</code>), inspected <code class="text-cyan-300">sudo</code> permissions, identified a permitted Git binary misconfiguration, escalated privileges to root within the lab, retrieved <code class="text-cyan-300">flag3.txt</code> and <code class="text-cyan-300">flag4.txt</code>, and documented the walkthrough with screenshots.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">Key Technical Learning</dt>
+                <dd>How restricted shells constrain PATH/command execution, why overly permissive <code class="text-cyan-300">sudo</code> rules on binaries like <code class="text-cyan-300">git</code> allow interactive shell spawning, and how to document reproducible lab evidence.</dd>
+              </div>
+            </dl>
           </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">Kali Linux</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">rbash Escape</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">Git GTFOBins</span>
-            </div>
-            <button onclick="openModal('dc2')" class="w-full font-mono text-xs text-cyan-400 hover:text-slate-950 hover:bg-cyan-400 border border-cyan-400/30 py-2.5 rounded-lg transition">
-              Inspect Exploitation Chain →
-            </button>
+
+          <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
+            <span class="text-slate-400">Evidence: <span class="text-amber-300">[Add project evidence — Lab Report / Screenshots]</span></span>
+            <button type="button" onclick="openModal('dc2')" class="text-cyan-400 hover:underline">View Lab Notes →</button>
           </div>
         </article>
 
-        <!-- 3. Windows Sysmon Incident Investigation -->
+        <!-- 2. Sysmon & Windows Event-Log Analysis -->
         <article class="glass-card rounded-2xl p-6 flex flex-col justify-between mission-item" data-category="sec">
           <div>
             <div class="flex items-center justify-between font-mono text-[11px] mb-3">
-              <span class="text-cyan-400 bg-cyan-400/10 border border-cyan-400/25 px-2.5 py-0.5 rounded">PRIORITY_03 // BLUE TEAM</span>
-              <span class="text-emerald-400">COMPLETED</span>
+              <span class="text-cyan-400 bg-cyan-400/10 border border-cyan-400/25 px-2.5 py-1 rounded">PRACTICAL LAB // BLUE TEAM &amp; LOG ANALYSIS</span>
+              <span class="text-emerald-400 bg-emerald-400/10 border border-emerald-400/25 px-2.5 py-1 rounded">STATUS: COMPLETED</span>
             </div>
-            <h3 class="font-display text-xl font-bold text-white mb-2">Windows Sysmon Forensics</h3>
-            <p class="text-sm text-slate-400 mb-4">
-              Threat-hunting investigation on <code class="text-cyan-300">Practice-Sysmon.evtx</code> using PowerShell &amp; Event Viewer to filter Event IDs 1, 3, 11, and 22 and uncover rogue executables and C2 URLs.
-            </p>
+            <h3 class="font-display text-2xl font-bold text-white mb-3">2. Windows Incident Investigation with Sysmon</h3>
+            
+            <dl class="space-y-2.5 text-xs sm:text-sm text-slate-300 mb-5">
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">Objective</dt>
+                <dd>Analyze a Windows Sysmon event-log file (<code class="text-cyan-300">Practice-Sysmon.evtx</code>) to identify suspicious processes, network connections, file creations, and DNS queries.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">Environment &amp; Tools</dt>
+                <dd>Windows, Sysmon, Windows Event Viewer, PowerShell (<code class="text-cyan-300">Practice-Sysmon.evtx</code> dataset).</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">What I Personally Did</dt>
+                <dd>Filtered and inspected Sysmon Event IDs <code class="text-cyan-300">1</code> (Process Creation), <code class="text-cyan-300">3</code> (Network Connection), <code class="text-cyan-300">11</code> (File Created), and <code class="text-cyan-300">22</code> (DNS Query), and used PowerShell queries to search large volumes of event messages for suspicious executable names and URLs.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">Key Technical Learning</dt>
+                <dd>Translating raw Windows telemetry into an investigation timeline and using PowerShell filtering when manual Event Viewer inspection is too slow.</dd>
+              </div>
+            </dl>
           </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">Sysmon EVTX</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">PowerShell</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">Event ID 1/3/11/22</span>
-            </div>
-            <button onclick="openModal('sysmon')" class="w-full font-mono text-xs text-cyan-400 hover:text-slate-950 hover:bg-cyan-400 border border-cyan-400/30 py-2.5 rounded-lg transition">
-              Inspect Forensics Dossier →
-            </button>
+
+          <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
+            <span class="text-slate-400">Evidence: <span class="text-amber-300">[Add project evidence — PowerShell Queries / Notes]</span></span>
+            <button type="button" onclick="openModal('sysmon')" class="text-cyan-400 hover:underline">View Lab Notes →</button>
           </div>
         </article>
 
-        <!-- 4. RFID-Activated Door Lock System -->
+        <!-- 3. Splunk Security Monitoring Practice -->
+        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between mission-item" data-category="sec">
+          <div>
+            <div class="flex items-center justify-between font-mono text-[11px] mb-3">
+              <span class="text-cyan-400 bg-cyan-400/10 border border-cyan-400/25 px-2.5 py-1 rounded">PRACTICAL LAB // SIEM MONITORING</span>
+              <span class="text-amber-300 bg-amber-400/10 border border-amber-400/25 px-2.5 py-1 rounded">STATUS: IN PROGRESS (LAB PRACTICE)</span>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-white mb-3">3. Splunk SIEM Security Monitoring Practice</h3>
+            
+            <dl class="space-y-2.5 text-xs sm:text-sm text-slate-300 mb-5">
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">Objective</dt>
+                <dd>Set up a local Splunk security-monitoring workflow to ingest Windows and Sysmon-related telemetry and search event data for suspicious activity.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">Environment &amp; Tools</dt>
+                <dd>Splunk Enterprise, Windows host logs, Sysmon telemetry.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">What I Personally Did</dt>
+                <dd>Configured the local Splunk environment, resolved IP and network configuration issues affecting log forwarding, ingested Windows security telemetry, and practiced running basic searches to inspect event data.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">Key Technical Learning</dt>
+                <dd>How SIEM log forwarding depends on accurate listener/network configuration and how centralized search speeds up log triage across Windows event sources.</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
+            <span class="text-slate-400">Evidence: <span class="text-amber-300">[Add project evidence — Splunk Search Screenshots]</span></span>
+            <button type="button" onclick="openModal('splunk')" class="text-cyan-400 hover:underline">View Lab Notes →</button>
+          </div>
+        </article>
+
+        <!-- 4. RFID and Keypad Door-Lock System -->
         <article class="glass-card rounded-2xl p-6 flex flex-col justify-between mission-item" data-category="iot">
           <div>
             <div class="flex items-center justify-between font-mono text-[11px] mb-3">
-              <span class="text-amber-400 bg-amber-400/10 border border-amber-400/25 px-2.5 py-0.5 rounded">PRIORITY_04 // HARDWARE SEC</span>
-              <span class="text-emerald-400">BUILT</span>
+              <span class="text-amber-400 bg-amber-400/10 border border-amber-400/25 px-2.5 py-1 rounded">HARDWARE SECURITY // ACCESS CONTROL</span>
+              <span class="text-emerald-400 bg-emerald-400/10 border border-emerald-400/25 px-2.5 py-1 rounded">STATUS: COMPLETED</span>
             </div>
-            <h3 class="font-display text-xl font-bold text-white mb-2">RFID Smart Door Lock</h3>
-            <p class="text-sm text-slate-400 mb-4">
-              Embedded physical access control system built on Arduino UNO R3 (ATmega328P) with MFRC522 RFID reader, keypad PIN override, LiquidCrystal_I2C display, servo lock, and audio-visual alerts.
-            </p>
+            <h3 class="font-display text-2xl font-bold text-white mb-3">4. RFID &amp; Keypad Door-Lock Access Control System</h3>
+            
+            <dl class="space-y-2.5 text-xs sm:text-sm text-slate-300 mb-5">
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">Objective</dt>
+                <dd>Build a physical access-control prototype combining RFID card authentication, keypad PIN override, user status display, and a servo-driven lock mechanism.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">Environment &amp; Tools</dt>
+                <dd>Arduino UNO R3 (ATmega328P), MFRC522 RFID reader, keypad module, servo motor, I2C LCD (<code class="text-cyan-300">LiquidCrystal_I2C</code>), buzzer, LEDs, Arduino C/C++.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">What I Personally Did</dt>
+                <dd>Wired the Arduino circuit on a breadboard, integrated the MFRC522 reader, keypad, servo actuator, and I2C LCD, debugged library and pin-mapping conflicts, and programmed the C/C++ authentication logic for authorized vs. denied access states.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">Key Technical Learning</dt>
+                <dd>Interfacing multiple SPI/I2C hardware peripherals on a microcontroller and implementing state logic for multi-factor/fallback physical access control.</dd>
+              </div>
+            </dl>
           </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">ATmega328P</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">MFRC522</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">LiquidCrystal_I2C</span>
-            </div>
-            <button onclick="openModal('rfid')" class="w-full font-mono text-xs text-cyan-400 hover:text-slate-950 hover:bg-cyan-400 border border-cyan-400/30 py-2.5 rounded-lg transition">
-              Inspect Hardware Schematic →
-            </button>
+
+          <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
+            <span class="text-slate-400">Evidence: <span class="text-amber-300">[Add project evidence — Circuit Photos / Arduino Code]</span></span>
+            <button type="button" onclick="openModal('rfid')" class="text-cyan-400 hover:underline">View Hardware Details →</button>
           </div>
         </article>
 
-        <!-- 5. Splunk SIEM Investigation Lab -->
-        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between mission-item" data-category="sec">
-          <div>
-            <div class="flex items-center justify-between font-mono text-[11px] mb-3">
-              <span class="text-cyan-400 bg-cyan-400/10 border border-cyan-400/25 px-2.5 py-0.5 rounded">PRIORITY_05 // SIEM SOC</span>
-              <span class="text-cyan-300">PRACTICAL LAB</span>
-            </div>
-            <h3 class="font-display text-xl font-bold text-white mb-2">Splunk SIEM Telemetry Lab</h3>
-            <p class="text-sm text-slate-400 mb-4">
-              Security monitoring and log ingestion pipeline using Splunk Enterprise: resolved network IP re-binding, ingested Windows &amp; Sysmon telemetry, and queried anomalous host activity.
-            </p>
-          </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">Splunk SIEM</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">SPL Queries</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">Telemetry</span>
-            </div>
-            <button onclick="openModal('splunk')" class="w-full font-mono text-xs text-cyan-400 hover:text-slate-950 hover:bg-cyan-400 border border-cyan-400/30 py-2.5 rounded-lg transition">
-              Inspect SIEM Workflow →
-            </button>
-          </div>
-        </article>
-
-        <!-- 6. TransitBridge (Flutter + Firebase) -->
+        <!-- 5. Akshaya@Doorstep -->
         <article class="glass-card rounded-2xl p-6 flex flex-col justify-between mission-item" data-category="dev">
           <div>
             <div class="flex items-center justify-between font-mono text-[11px] mb-3">
-              <span class="text-emerald-400 bg-emerald-400/10 border border-emerald-400/25 px-2.5 py-0.5 rounded">PRIORITY_06 // TRANSIT APP</span>
-              <span class="text-cyan-300">PROTOTYPE</span>
+              <span class="text-emerald-400 bg-emerald-400/10 border border-emerald-400/25 px-2.5 py-1 rounded">WEB APPLICATION // PHP &amp; MYSQL</span>
+              <span class="text-amber-300 bg-amber-400/10 border border-amber-400/25 px-2.5 py-1 rounded">STATUS: IN PROGRESS</span>
             </div>
-            <h3 class="font-display text-xl font-bold text-white mb-2">TransitBridge (Kerala Bus)</h3>
-            <p class="text-sm text-slate-400 mb-4">
-              Cross-platform Flutter &amp; Cloud Firestore transit application designed for Kerala bus commuters featuring route lookup, live Google Maps tracking concepts, and arrival alerts.
-            </p>
+            <h3 class="font-display text-2xl font-bold text-white mb-3">5. Akshaya@Doorstep — Service Centre Management System</h3>
+            
+            <dl class="space-y-2.5 text-xs sm:text-sm text-slate-300 mb-5">
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">Objective</dt>
+                <dd>Develop a PHP/MySQL management application for digital service centres handling both in-office visits and doorstep service requests.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">Environment &amp; Tools</dt>
+                <dd>PHP, MySQL, HTML, CSS, JavaScript, Apache, Linux environment.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">What I Personally Did</dt>
+                <dd>Designed the relational MySQL schema (<code class="text-cyan-300">users</code>, <code class="text-cyan-300">operators</code>, <code class="text-cyan-300">bookings</code>, <code class="text-cyan-300">payments</code>, <code class="text-cyan-300">notifications</code>, and <code class="text-cyan-300">audit_logs</code>), implemented role-based login for admins and staff/operators, and built workflows for booking assignment, status tracking, financial income/expense records, and database backups.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">Key Technical Learning</dt>
+                <dd>Structuring role-based access control (RBAC) in PHP/MySQL, maintaining transactional records, and designing audit logs for administrative accountability.</dd>
+              </div>
+            </dl>
           </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">Flutter</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">Cloud Firestore</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">Google Maps</span>
-            </div>
-            <button onclick="openModal('transit')" class="w-full font-mono text-xs text-cyan-400 hover:text-slate-950 hover:bg-cyan-400 border border-cyan-400/30 py-2.5 rounded-lg transition">
-              Inspect App Architecture →
-            </button>
+
+          <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
+            <span class="text-slate-400">Evidence: <span class="text-amber-300">[Add project evidence — GitHub Repo / Screenshots]</span></span>
+            <button type="button" onclick="openModal('akshaya')" class="text-cyan-400 hover:underline">View System Details →</button>
           </div>
         </article>
 
-        <!-- 7. ACPIA Sentinel (Hac'KP 2026) -->
-        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between mission-item" data-category="sec">
-          <div>
-            <div class="flex items-center justify-between font-mono text-[11px] mb-3">
-              <span class="text-emerald-400 bg-emerald-400/10 border border-emerald-400/25 px-2.5 py-0.5 rounded">MISSION_07 // HAC'KP '26</span>
-              <span class="text-slate-400">IIT PALAKKAD</span>
-            </div>
-            <h3 class="font-display text-xl font-bold text-white mb-2">ACPIA Sentinel</h3>
-            <p class="text-sm text-slate-400 mb-4">
-              AI-powered child protection investigation assistant pitched during the regional round of Hac'KP 2026 at IIT Palakkad (organized by Kerala Police Cyberdome).
-            </p>
-          </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">AI Forensics</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">Cyberdome</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">Case Triage</span>
-            </div>
-            <button onclick="openModal('acpia')" class="w-full font-mono text-xs text-cyan-400 hover:text-slate-950 hover:bg-cyan-400 border border-cyan-400/30 py-2.5 rounded-lg transition">
-              Inspect Mission Dossier →
-            </button>
-          </div>
-        </article>
-
-        <!-- 8. EventMaster (Arts & Meelad System) -->
+        <!-- 6. TransitBridge -->
         <article class="glass-card rounded-2xl p-6 flex flex-col justify-between mission-item" data-category="dev">
           <div>
             <div class="flex items-center justify-between font-mono text-[11px] mb-3">
-              <span class="text-cyan-400 bg-cyan-400/10 border border-cyan-400/25 px-2.5 py-0.5 rounded">MISSION_08 // EVENT SAAS</span>
-              <span class="text-slate-400">SYSTEM DESIGN</span>
+              <span class="text-emerald-400 bg-emerald-400/10 border border-emerald-400/25 px-2.5 py-1 rounded">MOBILE APP // FLUTTER &amp; FIREBASE</span>
+              <span class="text-cyan-300 bg-cyan-400/10 border border-cyan-400/25 px-2.5 py-1 rounded">STATUS: PROTOTYPE</span>
             </div>
-            <h3 class="font-display text-xl font-bold text-white mb-2">EventMaster Platform</h3>
-            <p class="text-sm text-slate-400 mb-4">
-              Full-scale competition management architecture for Kerala Arts &amp; Meelad festivals featuring QR registration, judge scoring panels, automated certificates, and live scoreboards.
-            </p>
+            <h3 class="font-display text-2xl font-bold text-white mb-3">6. TransitBridge — Kerala Bus Tracking Prototype</h3>
+            
+            <dl class="space-y-2.5 text-xs sm:text-sm text-slate-300 mb-5">
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">Objective</dt>
+                <dd>Prototype a public-transport application for Kerala commuters to look up bus routes, station timings, and arrival updates.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">Environment &amp; Tools</dt>
+                <dd>Flutter, Firebase, Cloud Firestore, Google Maps integration concepts.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">Implemented vs. Planned Scope</dt>
+                <dd><strong>Implemented Prototype:</strong> Flutter app screens, Firebase/Firestore backend connection, route/timing lookup structure, and Android-to-Web build experiments.<br/><strong>Planned Concept:</strong> Live GPS bus telemetry streaming and automated push arrival notifications.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-[11px] text-cyan-400 uppercase">Key Technical Learning</dt>
+                <dd>Connecting Flutter frontends to Cloud Firestore collections and managing cross-platform build configurations.</dd>
+              </div>
+            </dl>
           </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">React &amp; TS</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">Node / Express</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">PostgreSQL</span>
-            </div>
-            <button onclick="openModal('eventmaster')" class="w-full font-mono text-xs text-cyan-400 hover:text-slate-950 hover:bg-cyan-400 border border-cyan-400/30 py-2.5 rounded-lg transition">
-              Inspect System Spec →
-            </button>
+
+          <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
+            <span class="text-slate-400">Evidence: <span class="text-amber-300">[Add project evidence — Prototype Demo / Repo]</span></span>
+            <button type="button" onclick="openModal('transit')" class="text-cyan-400 hover:underline">View Prototype Notes →</button>
           </div>
         </article>
 
-        <!-- 9. Vulnerable Web App Assessment -->
-        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between mission-item" data-category="sec">
+        <!-- 7. Hexetra Digital Solutions & Web Projects -->
+        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between mission-item md:col-span-2" data-category="dev">
           <div>
             <div class="flex items-center justify-between font-mono text-[11px] mb-3">
-              <span class="text-rose-400 bg-rose-400/10 border border-rose-400/25 px-2.5 py-0.5 rounded">MISSION_09 // APPSEC</span>
-              <span class="text-slate-400">ASSESSMENT</span>
+              <span class="text-cyan-400 bg-cyan-400/10 border border-cyan-400/25 px-2.5 py-1 rounded">WEB DEVELOPMENT &amp; DIGITAL SERVICES</span>
+              <span class="text-emerald-400 bg-emerald-400/10 border border-emerald-400/25 px-2.5 py-1 rounded">STATUS: ONGOING WORK</span>
             </div>
-            <h3 class="font-display text-xl font-bold text-white mb-2">Web App Vulnerability Audit</h3>
-            <p class="text-sm text-slate-400 mb-4">
-              Comparative security evaluation of intentionally vulnerable targets (<code class="text-cyan-300">bWAPP</code>, <code class="text-cyan-300">VulnBank</code>, <code class="text-cyan-300">WackoPicko</code>) mapped against OWASP Top 10 vectors.
-            </p>
-          </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">bWAPP</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">VulnBank</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">WackoPicko</span>
+            <h3 class="font-display text-2xl font-bold text-white mb-3">7. Hexetra Digital Solutions, CastUrVote &amp; Web Engineering</h3>
+            
+            <div class="grid md:grid-cols-3 gap-4 text-xs sm:text-sm text-slate-300 mb-5">
+              <div class="bg-slate-950/60 border border-white/10 rounded-xl p-4">
+                <h4 class="font-mono text-xs text-cyan-400 font-bold mb-1">Hexetra Digital Solutions</h4>
+                <p>My personal digital-services brand (formerly Digi Dreamers) associated with <code class="text-cyan-300">hexetra.online</code>, covering web development, domain/hosting setup, and visual branding.</p>
+              </div>
+              <div class="bg-slate-950/60 border border-white/10 rounded-xl p-4">
+                <h4 class="font-mono text-xs text-cyan-400 font-bold mb-1">CastUrVote &amp; CampusCore</h4>
+                <p>Web and MySQL database projects involving QR-based voting workflows (<code class="text-cyan-300">CastUrVote</code>), local database administration (<code class="text-cyan-300">CampusCore</code>), and Vercel/server deployment debugging.</p>
+              </div>
+              <div class="bg-slate-950/60 border border-white/10 rounded-xl p-4">
+                <h4 class="font-mono text-xs text-cyan-400 font-bold mb-1">Client &amp; Community Web Work</h4>
+                <p>WordPress &amp; Kubio maintenance for <code class="text-cyan-300">zellabuilders.in</code>, Chathalloor unit membership form &amp; dashboard, and Sahithyolsav 2026 event schedule/rules support.</p>
+              </div>
             </div>
-            <button onclick="openModal('webappsec')" class="w-full font-mono text-xs text-cyan-400 hover:text-slate-950 hover:bg-cyan-400 border border-cyan-400/30 py-2.5 rounded-lg transition">
-              Inspect Audit Matrix →
-            </button>
           </div>
-        </article>
 
-        <!-- 10. Digital Heist & College Cyber Events -->
-        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between mission-item" data-category="sec">
-          <div>
-            <div class="flex items-center justify-between font-mono text-[11px] mb-3">
-              <span class="text-cyan-400 bg-cyan-400/10 border border-cyan-400/25 px-2.5 py-0.5 rounded">MISSION_10 // GAMIFIED CTF</span>
-              <span class="text-slate-400">EVENT DESIGN</span>
-            </div>
-            <h3 class="font-display text-xl font-bold text-white mb-2">Digital Heist &amp; Cyber Suite</h3>
-            <p class="text-sm text-slate-400 mb-4">
-              5-stage interactive cybersecurity competition (Logic Breaker → Code Cracker → Threat Detector → QR Hunt → Final Vault) plus OSINT Detective &amp; Bug Hunt tracks.
-            </p>
-          </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">5-Stage Heist</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">OSINT Detective</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">Ubuntu/Win Labs</span>
-            </div>
-            <button onclick="openModal('heist')" class="w-full font-mono text-xs text-cyan-400 hover:text-slate-950 hover:bg-cyan-400 border border-cyan-400/30 py-2.5 rounded-lg transition">
-              Inspect Event Blueprint →
-            </button>
-          </div>
-        </article>
-
-        <!-- 11. CastUrVote & CampusCore -->
-        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between mission-item" data-category="dev">
-          <div>
-            <div class="flex items-center justify-between font-mono text-[11px] mb-3">
-              <span class="text-emerald-400 bg-emerald-400/10 border border-emerald-400/25 px-2.5 py-0.5 rounded">MISSION_11 // CIVIC &amp; CAMPUS</span>
-              <span class="text-slate-400">WEB / MYSQL</span>
-            </div>
-            <h3 class="font-display text-xl font-bold text-white mb-2">CastUrVote &amp; CampusCore</h3>
-            <p class="text-sm text-slate-400 mb-4">
-              QR-authenticated online voting workflow (<code class="text-cyan-300">CastUrVote</code>) and campus administration database environment (<code class="text-cyan-300">CampusCore</code>) backed by MySQL and Vercel/Apache troubleshooting.
-            </p>
-          </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">QR Auth</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">MySQL Admin</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">Deployment</span>
-            </div>
-            <button onclick="openModal('casturvote')" class="w-full font-mono text-xs text-cyan-400 hover:text-slate-950 hover:bg-cyan-400 border border-cyan-400/30 py-2.5 rounded-lg transition">
-              Inspect Dossier →
-            </button>
-          </div>
-        </article>
-
-        <!-- 12. Hexetra Digital Solutions & Zella Builders -->
-        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between mission-item" data-category="dev">
-          <div>
-            <div class="flex items-center justify-between font-mono text-[11px] mb-3">
-              <span class="text-cyan-400 bg-cyan-400/10 border border-cyan-400/25 px-2.5 py-0.5 rounded">MISSION_12 // ENTERPRISE</span>
-              <span class="text-emerald-400">LIVE OPS</span>
-            </div>
-            <h3 class="font-display text-xl font-bold text-white mb-2">Hexetra &amp; Client Systems</h3>
-            <p class="text-sm text-slate-400 mb-4">
-              Executive branding and web operations for <code class="text-cyan-300">hexetra.online</code> (formerly Digi Dreamers), plus production WordPress/Kubio engineering for <code class="text-cyan-300">zellabuilders.in</code> and community portals.
-            </p>
-          </div>
-          <div>
-            <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">hexetra.online</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">zellabuilders.in</span>
-              <span class="font-mono text-[10px] bg-white/5 px-2 py-0.5 rounded text-slate-300">Chathalloor Portal</span>
-            </div>
-            <button onclick="openModal('hexetra')" class="w-full font-mono text-xs text-cyan-400 hover:text-slate-950 hover:bg-cyan-400 border border-cyan-400/30 py-2.5 rounded-lg transition">
-              Inspect Venture Dossier →
-            </button>
+          <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
+            <span class="text-slate-400">GitHub Profile: <a href="https://github.com/hexetraonline" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline">github.com/hexetraonline ↗</a></span>
+            <span class="text-slate-400">Evidence: <span class="text-amber-300">[Add specific repository or live site links]</span></span>
           </div>
         </article>
 
       </div>
     </section>
 
-    <!-- 04 // MASTER PROJECT REGISTER (ALL 25 RECONSTRUCTED & VERIFIED PROJECTS) -->
+    <!-- 03 // CATEGORIZED TECHNICAL SKILLS -->
+    <section id="arsenal" class="py-20 border-t border-white/10">
+      <div class="font-mono text-xs text-cyan-400 tracking-widest uppercase mb-2">03 // TECHNICAL SKILLS &amp; ENVIRONMENTS</div>
+      <h2 class="font-display text-3xl sm:text-5xl font-bold text-white mb-4">
+        Categorized <span class="text-cyan-400">skill set.</span>
+      </h2>
+      <p class="text-slate-400 text-sm max-w-2xl mb-10">
+        Organized by domain based on my coursework, hands-on cybersecurity lab practice, and software/hardware projects.
+      </p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        
+        <!-- 1. Security Practice -->
+        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <span class="font-mono text-xs text-cyan-400 block mb-2">01 // SECURITY PRACTICE (LAB-BASED)</span>
+            <h3 class="font-display text-xl font-bold text-white mb-2">Cybersecurity &amp; Analysis</h3>
+            <p class="text-sm text-slate-400 mb-5">
+              Practical skills developed through authorized vulnerable machines, event-log investigations, and academic assessments.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="font-mono text-[11px] bg-cyan-400/10 text-cyan-300 border border-cyan-400/20 px-2.5 py-1 rounded">Authorized Lab Penetration Testing</span>
+            <span class="font-mono text-[11px] bg-cyan-400/10 text-cyan-300 border border-cyan-400/20 px-2.5 py-1 rounded">Reconnaissance &amp; Enumeration</span>
+            <span class="font-mono text-[11px] bg-cyan-400/10 text-cyan-300 border border-cyan-400/20 px-2.5 py-1 rounded">Linux Privilege-Escalation Practice</span>
+            <span class="font-mono text-[11px] bg-cyan-400/10 text-cyan-300 border border-cyan-400/20 px-2.5 py-1 rounded">Windows Event-Log Analysis</span>
+            <span class="font-mono text-[11px] bg-cyan-400/10 text-cyan-300 border border-cyan-400/20 px-2.5 py-1 rounded">Web Vulnerability Assessment Planning</span>
+          </div>
+        </article>
+
+        <!-- 2. Programming -->
+        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <span class="font-mono text-xs text-emerald-400 block mb-2">02 // PROGRAMMING LANGUAGES</span>
+            <h3 class="font-display text-xl font-bold text-white mb-2">Core Programming</h3>
+            <p class="text-sm text-slate-400 mb-5">
+              Used for B.Tech coursework, problem-solving, embedded Arduino logic, and scripting.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="font-mono text-[11px] bg-emerald-400/10 text-emerald-300 border border-emerald-400/20 px-2.5 py-1 rounded">C</span>
+            <span class="font-mono text-[11px] bg-emerald-400/10 text-emerald-300 border border-emerald-400/20 px-2.5 py-1 rounded">C++ (Arduino / Core)</span>
+            <span class="font-mono text-[11px] bg-emerald-400/10 text-emerald-300 border border-emerald-400/20 px-2.5 py-1 rounded">Python</span>
+          </div>
+        </article>
+
+        <!-- 3. Operating Systems & Environments -->
+        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <span class="font-mono text-xs text-cyan-400 block mb-2">03 // OS &amp; LAB ENVIRONMENTS</span>
+            <h3 class="font-display text-xl font-bold text-white mb-2">Systems &amp; Virtualization</h3>
+            <p class="text-sm text-slate-400 mb-5">
+              Environments used daily for security labs, Linux command-line practice, and local server hosting.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="font-mono text-[11px] bg-white/5 text-slate-200 border border-white/10 px-2.5 py-1 rounded">Kali Linux</span>
+            <span class="font-mono text-[11px] bg-white/5 text-slate-200 border border-white/10 px-2.5 py-1 rounded">Ubuntu / Linux</span>
+            <span class="font-mono text-[11px] bg-white/5 text-slate-200 border border-white/10 px-2.5 py-1 rounded">Windows</span>
+            <span class="font-mono text-[11px] bg-white/5 text-slate-200 border border-white/10 px-2.5 py-1 rounded">Virtual Machines (Lab Setup)</span>
+          </div>
+        </article>
+
+        <!-- 4. Web & App Development -->
+        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <span class="font-mono text-xs text-emerald-400 block mb-2">04 // APPLICATION DEVELOPMENT</span>
+            <h3 class="font-display text-xl font-bold text-white mb-2">Web, Database &amp; Mobile</h3>
+            <p class="text-sm text-slate-400 mb-5">
+              Technologies used to build Akshaya@Doorstep, TransitBridge, CastUrVote, and client websites.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="font-mono text-[11px] bg-emerald-400/10 text-emerald-300 border border-emerald-400/20 px-2.5 py-1 rounded">PHP</span>
+            <span class="font-mono text-[11px] bg-emerald-400/10 text-emerald-300 border border-emerald-400/20 px-2.5 py-1 rounded">MySQL</span>
+            <span class="font-mono text-[11px] bg-emerald-400/10 text-emerald-300 border border-emerald-400/20 px-2.5 py-1 rounded">HTML5 &amp; CSS3</span>
+            <span class="font-mono text-[11px] bg-emerald-400/10 text-emerald-300 border border-emerald-400/20 px-2.5 py-1 rounded">JavaScript</span>
+            <span class="font-mono text-[11px] bg-emerald-400/10 text-emerald-300 border border-emerald-400/20 px-2.5 py-1 rounded">Flutter &amp; Firebase (Prototype)</span>
+            <span class="font-mono text-[11px] bg-emerald-400/10 text-emerald-300 border border-emerald-400/20 px-2.5 py-1 rounded">WordPress</span>
+          </div>
+        </article>
+
+        <!-- 5. Security & Engineering Tools -->
+        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between sm:col-span-2">
+          <div>
+            <span class="font-mono text-xs text-amber-400 block mb-2">05 // TOOLS &amp; HARDWARE PLATFORMS</span>
+            <h3 class="font-display text-xl font-bold text-white mb-2">Security, Log Analysis &amp; Development Tools</h3>
+            <p class="text-sm text-slate-400 mb-5">
+              Tools and hardware modules practiced across my completed labs and active projects.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="font-mono text-[11px] bg-amber-400/10 text-amber-300 border border-amber-400/20 px-3 py-1 rounded">Sysmon &amp; Windows Event Viewer</span>
+            <span class="font-mono text-[11px] bg-amber-400/10 text-amber-300 border border-amber-400/20 px-3 py-1 rounded">PowerShell (Log Filtering)</span>
+            <span class="font-mono text-[11px] bg-amber-400/10 text-amber-300 border border-amber-400/20 px-3 py-1 rounded">Splunk (Lab Setup &amp; Basic Queries)</span>
+            <span class="font-mono text-[11px] bg-amber-400/10 text-amber-300 border border-amber-400/20 px-3 py-1 rounded">Nmap</span>
+            <span class="font-mono text-[11px] bg-amber-400/10 text-amber-300 border border-amber-400/20 px-3 py-1 rounded">Git &amp; GitHub</span>
+            <span class="font-mono text-[11px] bg-amber-400/10 text-amber-300 border border-amber-400/20 px-3 py-1 rounded">VS Code</span>
+            <span class="font-mono text-[11px] bg-amber-400/10 text-amber-300 border border-amber-400/20 px-3 py-1 rounded">Arduino UNO &amp; MFRC522 RFID</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 04 // COMPLETE PROJECT & LAB REGISTER (SEPARATED BY REAL STATUS) -->
     <section id="vault" class="py-20 border-t border-white/10">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
         <div>
-          <div class="font-mono text-xs text-emerald-400 tracking-widest uppercase mb-2">04 // COMPLETE MASTER REGISTER</div>
+          <div class="font-mono text-xs text-emerald-400 tracking-widest uppercase mb-2">04 // PROJECT &amp; CONCEPT REGISTER</div>
           <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">
-            Full 25-Project <span class="text-cyan-400">Engineering Index.</span>
+            Complete <span class="text-cyan-400">work &amp; concept log.</span>
           </h2>
-          <p class="text-slate-400 text-sm mt-1">Searchable, categorized inventory across software development, red/blue cybersecurity labs, hardware, and digital operations.</p>
+          <p class="text-slate-400 text-sm mt-1">
+            Transparently separating completed hands-on labs/builds from active development, prototypes, and planned concepts.
+          </p>
         </div>
 
-        <!-- Search Input & Category Dropdown -->
+        <!-- Search & Status Filter -->
         <div class="flex flex-wrap sm:flex-nowrap gap-2.5 w-full md:w-auto">
+          <label for="vault-search" class="sr-only">Search projects</label>
           <input 
             id="vault-search" 
             type="text" 
-            placeholder="Search 25 projects (e.g. Sysmon, PHP, RFID)..." 
+            placeholder="Search register (e.g. Sysmon, PHP, RFID)..." 
             oninput="renderVault()"
             class="bg-slate-900/90 border border-white/15 focus:border-cyan-400 rounded-lg px-3.5 py-2 text-xs font-mono text-white placeholder-slate-500 focus:outline-none w-full sm:w-64"
           />
+          <label for="vault-status" class="sr-only">Filter by status</label>
           <select 
-            id="vault-cat" 
+            id="vault-status" 
             onchange="renderVault()"
             class="bg-slate-900/90 border border-white/15 focus:border-cyan-400 rounded-lg px-3 py-2 text-xs font-mono text-cyan-300 focus:outline-none"
           >
-            <option value="ALL">All Categories (25)</option>
-            <option value="Software Development">1. Software Dev (6)</option>
-            <option value="Cybersecurity Lab">2. Cybersecurity Labs (5)</option>
-            <option value="Cyber Events & Games">3. Cyber Events &amp; Games (3)</option>
-            <option value="Hardware & IoT">4. Electronics &amp; Hardware (2)</option>
-            <option value="Websites & Branding">5. Websites &amp; Branding (4)</option>
-            <option value="Community & Org Tools">6. Community &amp; Event Tools (2)</option>
-            <option value="Supporting Engineering">7. Supporting &amp; Infra (3)</option>
+            <option value="ALL">All Statuses</option>
+            <option value="Completed">Completed Labs &amp; Builds</option>
+            <option value="In Progress">In Progress / Active Work</option>
+            <option value="Prototype">Prototypes &amp; Existing Web</option>
+            <option value="Planned / Concept">Planned / Event Concepts</option>
           </select>
         </div>
       </div>
@@ -801,82 +823,44 @@
               <tr class="border-b border-white/10 bg-slate-950/60 font-mono text-[11px] text-slate-400 uppercase">
                 <th class="py-3.5 px-4">#</th>
                 <th class="py-3.5 px-4">Project / Lab Name</th>
-                <th class="py-3.5 px-4">Domain Category</th>
-                <th class="py-3.5 px-4">Core Stack &amp; Highlights</th>
+                <th class="py-3.5 px-4">Category</th>
+                <th class="py-3.5 px-4">Scope &amp; Technologies</th>
                 <th class="py-3.5 px-4">Status</th>
               </tr>
             </thead>
             <tbody id="vault-tbody" class="divide-y divide-white/5 text-xs">
-              <!-- Populated by JS -->
+              <!-- Populated safely via DOM APIs in JS -->
             </tbody>
           </table>
         </div>
       </div>
     </section>
 
-    <!-- 05 // MISSION TIMELINE -->
-    <section id="timeline" class="py-20 border-t border-white/10">
-      <div class="font-mono text-xs text-cyan-400 tracking-widest uppercase mb-2">05 // MISSION TIMELINE</div>
-      <h2 class="font-display text-3xl sm:text-5xl font-bold text-white mb-12">
-        Learn. Probe. <span class="text-cyan-400">Secure.</span>
-      </h2>
-
-      <div class="relative border-l-2 border-cyan-400/30 ml-3 pl-8 space-y-10 max-w-3xl">
-        <div class="relative">
-          <span class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-obsidian border-2 border-cyan-400 shadow-[0_0_10px_#38bdf8]"></span>
-          <span class="font-mono text-xs text-cyan-400 font-bold">2023 // FOUNDATION</span>
-          <h3 class="font-display text-xl font-bold text-white mt-0.5">Systems Curiosity &amp; Early Code</h3>
-          <p class="text-slate-400 text-sm mt-1">Transitioned from casual exploration to building functional web tools, hardware circuits, and inspecting how operating systems work underneath the GUI.</p>
-        </div>
-
-        <div class="relative">
-          <span class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-obsidian border-2 border-cyan-400"></span>
-          <span class="font-mono text-xs text-cyan-400 font-bold">2024 // OFFENSIVE &amp; DEFENSIVE TRAINING</span>
-          <h3 class="font-display text-xl font-bold text-white mt-0.5">Google Cybersecurity Certificate &amp; Ethical Hacking Labs</h3>
-          <p class="text-slate-400 text-sm mt-1">Completed the Google Cybersecurity Professional Certificate and intensified hands-on penetration testing (DC-2 root escalation), Sysmon EVTX threat hunting, and Splunk SIEM configuration.</p>
-        </div>
-
-        <div class="relative">
-          <span class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-obsidian border-2 border-cyan-400"></span>
-          <span class="font-mono text-xs text-cyan-400 font-bold">2025 // B.TECH CSE (CYBER SECURITY) &amp; HEXETRA</span>
-          <h3 class="font-display text-xl font-bold text-white mt-0.5">Academic Specialization &amp; Corporate Rebrand</h3>
-          <p class="text-slate-400 text-sm mt-1">Started B.Tech CSE with Cyber Security specialization, evolved Digi Dreamers into Hexetra Digital Solutions (`hexetra.online`), and built the Arduino UNO MFRC522 RFID smart door lock.</p>
-        </div>
-
-        <div class="relative">
-          <span class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-emerald-400 border-2 border-obsidian shadow-[0_0_14px_#10b981]"></span>
-          <span class="font-mono text-xs text-emerald-400 font-bold">2026 // FULL-STACK DEPLOYMENTS &amp; STATE HACKATHONS</span>
-          <h3 class="font-display text-xl font-bold text-white mt-0.5">Akshaya@Doorstep, Hac'KP '26, UIDAI &amp; Sahithyolsav</h3>
-          <p class="text-slate-400 text-sm mt-1">Actively developing Akshaya@Doorstep (PHP/MySQL), pitched ACPIA Sentinel at IIT Palakkad (Kerala Police Cyberdome), led the UIDAI Kerala Aadhaar analysis team, and designed the Digital Heist &amp; EventMaster platforms.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 06 // CONTACT -->
+    <!-- 05 // CONTACT -->
     <section id="contact" class="py-20 border-t border-white/10">
       <div class="glass-card rounded-3xl p-8 sm:p-14 text-center max-w-4xl mx-auto border border-cyan-400/25">
-        <span class="font-mono text-xs text-cyan-400 tracking-widest uppercase block mb-3">// ESTABLISH A SECURE CONNECTION — 06</span>
+        <span class="font-mono text-xs text-cyan-400 tracking-widest uppercase block mb-3">// ESTABLISH A CONNECTION — 05</span>
         <h2 class="font-display text-3xl sm:text-5xl font-bold text-white mb-4">
-          Let's build something <span class="text-cyan-400">secure &amp; remarkable.</span>
+          Let's connect on <span class="text-cyan-400">security &amp; development.</span>
         </h2>
         <p class="text-slate-400 max-w-xl mx-auto mb-8 text-sm sm:text-base">
-          Looking to collaborate on a cybersecurity project, hire Hexetra for software or web architecture, or discuss an engineering role? Open a direct channel.
+          Have a cybersecurity internship opportunity, a collaborative student project, or a web development inquiry? Feel free to reach out.
         </p>
 
         <div class="flex flex-wrap items-center justify-center gap-3 mb-10">
           <a href="mailto:yaseen@yaseentk.in" class="font-mono text-sm sm:text-base font-bold bg-cyan-400 hover:bg-cyan-300 text-slate-950 px-7 py-4 rounded-xl shadow-lg shadow-cyan-400/20 transition">
             yaseen@yaseentk.in ↗
           </a>
-          <button onclick="copyEmail()" id="copy-btn" class="font-mono text-xs bg-slate-900 hover:bg-slate-800 text-slate-200 border border-white/15 px-5 py-4 rounded-xl transition">
+          <button type="button" onclick="copyEmail()" id="copy-btn" class="font-mono text-xs bg-slate-900 hover:bg-slate-800 text-slate-200 border border-white/15 px-5 py-4 rounded-xl transition">
             COPY EMAIL
           </button>
         </div>
 
         <div class="flex flex-wrap justify-center gap-3 font-mono text-xs">
-          <a href="https://github.com/hexetraonline" target="_blank" rel="noopener" class="bg-white/5 hover:bg-white/10 hover:text-cyan-400 border border-white/10 px-4 py-2.5 rounded-lg transition">GITHUB ↗</a>
-          <a href="https://linkedin.com/in/yaseen-hexetra" target="_blank" rel="noopener" class="bg-white/5 hover:bg-white/10 hover:text-cyan-400 border border-white/10 px-4 py-2.5 rounded-lg transition">LINKEDIN ↗</a>
-          <a href="https://instagram.com/yxseen.17/" target="_blank" rel="noopener" class="bg-white/5 hover:bg-white/10 hover:text-cyan-400 border border-white/10 px-4 py-2.5 rounded-lg transition">INSTAGRAM ↗</a>
-          <a href="https://wa.me/+917994693698" target="_blank" rel="noopener" class="bg-white/5 hover:bg-white/10 hover:text-emerald-400 border border-white/10 px-4 py-2.5 rounded-lg transition">WHATSAPP ↗</a>
+          <a href="https://github.com/hexetraonline" target="_blank" rel="noopener noreferrer" class="bg-white/5 hover:bg-white/10 hover:text-cyan-400 border border-white/10 px-4 py-2.5 rounded-lg transition">GITHUB ↗</a>
+          <a href="https://linkedin.com/in/yaseen-hexetra" target="_blank" rel="noopener noreferrer" class="bg-white/5 hover:bg-white/10 hover:text-cyan-400 border border-white/10 px-4 py-2.5 rounded-lg transition">LINKEDIN ↗</a>
+          <a href="https://instagram.com/yxseen.17/" target="_blank" rel="noopener noreferrer" class="bg-white/5 hover:bg-white/10 hover:text-cyan-400 border border-white/10 px-4 py-2.5 rounded-lg transition">INSTAGRAM ↗</a>
+          <a href="https://wa.me/+917994693698" target="_blank" rel="noopener noreferrer" class="bg-white/5 hover:bg-white/10 hover:text-emerald-400 border border-white/10 px-4 py-2.5 rounded-lg transition">WHATSAPP ↗</a>
           <a href="tel:+917994693698" class="bg-white/5 hover:bg-white/10 hover:text-cyan-400 border border-white/10 px-4 py-2.5 rounded-lg transition">PHONE ↗</a>
         </div>
       </div>
@@ -884,30 +868,30 @@
 
     <!-- FOOTER -->
     <footer class="py-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between font-mono text-xs text-slate-500 gap-4">
-      <div>© 2026 MUHAMMED YASEEN T K // HEXETRA DIGITAL SOLUTIONS // ALL 25 MISSIONS INDEXED</div>
-      <a href="#home" class="text-cyan-400 hover:underline">↑ TOP OF TERMINAL</a>
+      <div>© 2026 MUHAMMED YASEEN T K // B.TECH CSE (CYBER SECURITY) STUDENT</div>
+      <a href="#home" class="text-cyan-400 hover:underline">↑ TOP</a>
     </footer>
 
   </main>
 
-  <!-- ARCHITECTURE DOSSIER MODAL -->
-  <div id="dossier-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+  <!-- PROJECT NOTES MODAL -->
+  <div id="dossier-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
     <div class="glass-card max-w-xl w-full rounded-2xl p-6 sm:p-8 border border-cyan-400/40 shadow-2xl relative">
-      <button onclick="closeModal()" class="absolute top-5 right-5 font-mono text-xs text-slate-400 hover:text-white bg-white/5 px-2.5 py-1 rounded">ESC ✕</button>
+      <button type="button" onclick="closeModal()" class="absolute top-5 right-5 font-mono text-xs text-slate-400 hover:text-white bg-white/5 px-2.5 py-1 rounded">ESC ✕</button>
       <div id="modal-tag" class="font-mono text-xs text-cyan-400 mb-1"></div>
       <h3 id="modal-title" class="font-display text-2xl font-bold text-white mb-3"></h3>
       <p id="modal-desc" class="text-slate-300 text-sm leading-relaxed mb-5"></p>
       <div class="bg-slate-950/90 border border-white/10 rounded-xl p-4 mb-5">
-        <span class="font-mono text-[10px] text-emerald-400 uppercase tracking-wider block mb-2">// KEY TECHNICAL DELIVERABLES &amp; WORKFLOW</span>
+        <span class="font-mono text-[10px] text-emerald-400 uppercase tracking-wider block mb-2">// DOCUMENTED WORKFLOW &amp; TAKEAWAYS</span>
         <ul id="modal-bullets" class="space-y-1.5 text-xs text-slate-300 font-mono list-disc list-inside"></ul>
       </div>
       <div id="modal-stack" class="flex flex-wrap gap-1.5"></div>
     </div>
   </div>
 
-  <!-- INTERACTIVE SCRIPTS -->
+  <!-- SCRIPTS (HARDENED DOM MANIPULATION & ERROR-CHECKED CLIPBOARD) -->
   <script>
-    // 1. Spotlight & Card Hover Tracking
+    // 1. Cursor Spotlight & Card Hover Effect
     const spotlight = document.getElementById('spotlight');
     window.addEventListener('mousemove', (e) => {
       spotlight.style.left = `${e.clientX}px`;
@@ -922,44 +906,54 @@
       });
     });
 
-    // 2. Live Ping Status Counter
-    const pingDisplay = document.getElementById('ping-display');
-    setInterval(() => {
-      const ms = Math.floor(Math.random() * 6) + 10;
-      pingDisplay.textContent = `ONLINE // ${ms}ms`;
-    }, 3500);
-
-    // 3. Interactive Security Shell
+    // 2. Safe Interactive Portfolio Helper (Zero unsafe innerHTML with user input)
     const termForm = document.getElementById('term-form');
     const termInput = document.getElementById('term-input');
     const termLog = document.getElementById('term-log');
 
     const SHELL_RESPONSES = {
-      help: "Commands: <span class='text-cyan-400'>dc2</span>, <span class='text-cyan-400'>sysmon</span>, <span class='text-cyan-400'>splunk</span>, <span class='text-cyan-400'>akshaya</span>, <span class='text-cyan-400'>rfid</span>, <span class='text-cyan-400'>hexetra</span>, <span class='text-cyan-400'>contact</span>, <span class='text-cyan-400'>clear</span>",
-      dc2: "[RED TEAM] DC-2 Lab: Enumerated users -> bypassed rbash -> audited sudo -l -> abused git privilege escalation -> captured flag3.txt & flag4.txt.",
-      sysmon: "[BLUE TEAM] Analyzed Practice-Sysmon.evtx via PowerShell & Event Viewer. Filtered Event IDs 1 (Process), 3 (Network), 11 (File), 22 (DNS) to flag rogue binaries.",
-      splunk: "[SIEM LAB] Configured Splunk Enterprise IP binding, ingested Windows & Sysmon telemetry logs, and executed threat-hunting SPL queries.",
-      akshaya: "[FULL-STACK] Akshaya@Doorstep: PHP + MySQL Digital Service Centre system with Admin/Operator roles, doorstep booking assignments, ledger & audit logs.",
-      rfid: "[HARDWARE IoT] Arduino UNO R3 (ATmega328P) + MFRC522 RFID + 4x4 Keypad PIN override + LiquidCrystal_I2C + Servo physical locking mechanism.",
-      hexetra: "[VENTURE] Hexetra Digital Solutions (hexetra.online) — Rebranded from Digi Dreamers. Client web systems incl. zellabuilders.in & community portals.",
-      contact: "Direct Channel -> Email: yaseen@yaseentk.in | GitHub: @hexetraonline | Phone/WA: +91 7994693698"
+      help: "Available commands: education, ocsp, labs, projects, skills, contact, clear",
+      education: "B.Tech in Computer Science & Engineering (Cyber Security), 2nd Year — KMCT Institute of Emerging Technology and Management (affiliated with KTU).",
+      ocsp: "Offenso Certified Security Professional (OCSP) at Offenso Hackers Academy — Status: In Progress (Expected Completion: November 2026).",
+      labs: "Completed & Active Labs: 1) DC-2 Vulnerable VM Lab | 2) Windows Sysmon Event-Log Analysis (Practice-Sysmon.evtx) | 3) Splunk SIEM Monitoring Practice.",
+      projects: "Key Builds: 1) RFID & Keypad Door Lock (Arduino UNO) | 2) Akshaya@Doorstep (PHP/MySQL - In Progress) | 3) TransitBridge (Flutter/Firebase Prototype).",
+      skills: "Programming: C, C++, Python | Web/App: PHP, MySQL, HTML/CSS/JS, Flutter | Security Tools: Kali Linux, Sysmon, Event Viewer, PowerShell, Splunk, Nmap.",
+      contact: "Email: yaseen@yaseentk.in | GitHub: github.com/hexetraonline | LinkedIn: linkedin.com/in/yaseen-hexetra"
     };
 
-    function runShellCmd(rawCmd) {
-      const cmd = rawCmd.trim().toLowerCase();
-      if (!cmd) return;
+    function runShellCmd(rawInput) {
+      const trimmed = String(rawInput || '').trim();
+      const cmd = trimmed.toLowerCase();
+      if (!trimmed) return;
+
       if (cmd === 'clear') {
-        termLog.innerHTML = '';
+        termLog.replaceChildren();
         return;
       }
-      const line = document.createElement('div');
-      line.innerHTML = `<span class="text-emerald-400">root@yaseen:~$</span> <span class="text-white">${rawCmd.replace(/</g, '&lt;')}</span>`;
-      termLog.appendChild(line);
 
-      const out = document.createElement('div');
-      out.className = "text-slate-300 pl-2";
-      out.innerHTML = SHELL_RESPONSES[cmd] || `bash: ${cmd.replace(/</g, '&lt;')}: command not found. Try <span class='text-cyan-400'>help</span>.`;
-      termLog.appendChild(out);
+      // Safely construct command echo line using textContent
+      const cmdRow = document.createElement('div');
+      const promptSpan = document.createElement('span');
+      promptSpan.className = 'text-emerald-400';
+      promptSpan.textContent = 'yaseen@portfolio:~$ ';
+
+      const cmdSpan = document.createElement('span');
+      cmdSpan.className = 'text-white';
+      cmdSpan.textContent = trimmed;
+
+      cmdRow.appendChild(promptSpan);
+      cmdRow.appendChild(cmdSpan);
+      termLog.appendChild(cmdRow);
+
+      // Safely construct output line using textContent
+      const outRow = document.createElement('div');
+      outRow.className = 'text-slate-300 pl-2';
+      if (Object.prototype.hasOwnProperty.call(SHELL_RESPONSES, cmd)) {
+        outRow.textContent = SHELL_RESPONSES[cmd];
+      } else {
+        outRow.textContent = `Command not recognized: "${trimmed}". Type "help" for available commands.`;
+      }
+      termLog.appendChild(outRow);
       termLog.scrollTop = termLog.scrollHeight;
     }
 
@@ -969,7 +963,7 @@
       termInput.value = '';
     });
 
-    // 4. Filter Featured Missions
+    // 3. Category Filter for Main Project Cards
     function filterMissions(cat) {
       document.querySelectorAll('.mission-item').forEach(card => {
         if (cat === 'all' || card.dataset.category === cat) {
@@ -988,205 +982,152 @@
       });
     }
 
-    // 5. Complete 25-Project Master Register Data
+    // 4. Complete Project & Concept Register (Accurate Status Separation)
     const MASTER_PROJECTS = [
-      { id: 1, name: "Akshaya@Doorstep", cat: "Software Development", stack: "PHP, MySQL, JS, Linux, Apache — Admin/operator login, doorstep bookings, payments & audit logs", status: "Active Development" },
-      { id: 2, name: "TransitBridge (Kerala Bus App)", cat: "Software Development", stack: "Flutter, Firebase, Cloud Firestore, Google Maps — Live bus timings, route search & arrival alerts", status: "Prototype Work" },
-      { id: 3, name: "EventMaster (Arts & Meelad)", cat: "Software Development", stack: "React, TypeScript, Node.js, Express, PostgreSQL, JWT — QR registration, judge scoring & live scoreboard", status: "System Design" },
-      { id: 4, name: "CastUrVote", cat: "Software Development", stack: "Web Stack, MySQL, QR Auth — Digital voting workflow, database management & QR loading", status: "Existing Project" },
-      { id: 5, name: "CampusCore", cat: "Software Development", stack: "Web Stack, MySQL — Campus management database identification, admin & local server ops", status: "Existing Project" },
-      { id: 6, name: "Yaseen Daily", cat: "Software Development", stack: "Android Concept, Local Storage — Daily study/cyber task tracker, streaks, charts & offline carry-over", status: "Concept / Planned" },
-      { id: 7, name: "DC-2 Vulnerable Machine Pentest", cat: "Cybersecurity Lab", stack: "Kali Linux, rbash Escape, Git Sudo Privesc — Captured flag3.txt & flag4.txt + documented report", status: "Completed Lab" },
-      { id: 8, name: "Windows Sysmon Incident Forensics", cat: "Cybersecurity Lab", stack: "Windows, PowerShell, Sysmon (Practice-Sysmon.evtx) — Filtered Event IDs 1, 3, 11, 22 for threat hunting", status: "Completed Lab" },
-      { id: 9, name: "Splunk SIEM Investigation Lab", cat: "Cybersecurity Lab", stack: "Splunk Enterprise, Windows Telemetry, Sysmon — IP config troubleshooting & suspicious event analysis", status: "Practical Work" },
-      { id: 10, name: "Vulnerable Web App Assessment", cat: "Cybersecurity Lab", stack: "bWAPP, VulnBank, WackoPicko — Academic security assessment target evaluation & vulnerability mapping", status: "Assessment & Planning" },
-      { id: 11, name: "CTF & Ethical Hacking Practice", cat: "Cybersecurity Lab", stack: "Linux Enumeration, Privilege Escalation, Permissions Auditing, Evidence Collection", status: "Ongoing Lab Work" },
-      { id: 12, name: "Digital Heist Cyber Game", cat: "Cyber Events & Games", stack: "5 Stages: Logic Breaker, Code Cracker, Threat Detector, QR Hunt, Final Vault", status: "Event Design" },
-      { id: 13, name: "College Cybersecurity Tech Events", cat: "Cyber Events & Games", stack: "Cyber Heist, Escape Run, OSINT Detective, Bug Hunt, Code vs Hacker (Ubuntu/Windows labs)", status: "Programme Design" },
-      { id: 14, name: "OSINT Detective Challenge", cat: "Cyber Events & Games", stack: "Open-Source Intelligence correlation, digital footprint analysis & case-solving workflow", status: "Planned Track" },
-      { id: 15, name: "RFID-Activated Door Lock System", cat: "Hardware & IoT", stack: "Arduino UNO R3 (ATmega328P), MFRC522 RFID, Keypad PIN Override, Servo, LiquidCrystal_I2C", status: "Built Hardware" },
-      { id: 16, name: "ESP / ESP32 Connected Experiments", cat: "Hardware & IoT", stack: "ESP32 Embedded Systems & IoT wireless microcontroller exploration", status: "Hardware Lab" },
-      { id: 17, name: "Hexetra Digital Solutions", cat: "Websites & Branding", stack: "hexetra.online (formerly Digi Dreamers) — Brand identity, web development, hosting & IT consultancy", status: "Active Business" },
-      { id: 18, name: "Zella Builders Website", cat: "Websites & Branding", stack: "zellabuilders.in — WordPress, Kubio builder, hosting renewal quotations & redesign", status: "Client Maintenance" },
-      { id: 19, name: "Personal Pre-Launch Website", cat: "Websites & Branding", stack: "Futuristic terminal-style coming-soon identity page with social links & responsive layout", status: "Planned" },
-      { id: 20, name: "Wedding Website Templates", cat: "Websites & Branding", stack: "Custom responsive event & wedding web template architectures", status: "Design Work" },
-      { id: 21, name: "Chathalloor Unit Membership System", cat: "Community & Org Tools", stack: "Mobile-friendly membership form, photo upload, spreadsheet export & password-protected dashboard", status: "Development Work" },
-      { id: 22, name: "Sahithyolsav 2026 Digital Support", cat: "Community & Org Tools", stack: "SSF Sector Sahithyolsav schedule automation, Malayalam posters & competition rules web prototype", status: "Event Tech" },
-      { id: 23, name: "Flutter + Firebase Web Experiments", cat: "Supporting Engineering", stack: "Cross-platform Android-to-Web Flutter compilation & Firebase state experiments", status: "Dev Experiment" },
-      { id: 24, name: "QR & Cloud Deployment Debugging", cat: "Supporting Engineering", stack: "Vercel deployment pipelines, QR payload troubleshooting & database connectivity fixes", status: "Supporting Eng" },
-      { id: 25, name: "Cybersecurity & Dev Workstation", cat: "Supporting Engineering", stack: "Dual-monitor multi-OS lab environment configured for Kali, SIEM, C/C++ & full-stack builds", status: "Infrastructure" }
+      { id: 1, name: "DC-2 Vulnerable Machine Penetration Test", cat: "Cybersecurity Lab", stack: "Authorized lab VM, Kali Linux, rbash escape, Git sudo privilege escalation, flag3 & flag4 report", status: "Completed" },
+      { id: 2, name: "Windows Incident Investigation with Sysmon", cat: "Cybersecurity Lab", stack: "Windows, PowerShell, Event Viewer, Practice-Sysmon.evtx — Event IDs 1, 3, 11, 22 analysis", status: "Completed" },
+      { id: 3, name: "RFID-Activated Door Lock System", cat: "Hardware Security", stack: "Arduino UNO R3 (ATmega328P), MFRC522 RFID, Keypad PIN override, Servo, LiquidCrystal_I2C", status: "Completed" },
+      { id: 4, name: "Akshaya@Doorstep Management System", cat: "Web Application", stack: "PHP, MySQL, HTML/CSS/JS, Apache — Admin/operator login, bookings, payments & audit logs", status: "In Progress" },
+      { id: 5, name: "Splunk SIEM Investigation Lab", cat: "Cybersecurity Lab", stack: "Splunk Enterprise, Windows & Sysmon telemetry, network IP config troubleshooting & log queries", status: "In Progress" },
+      { id: 6, name: "CTF & Ethical Hacking Lab Practice", cat: "Cybersecurity Lab", stack: "Ongoing Linux enumeration, permissions analysis, privilege escalation & evidence documentation", status: "In Progress" },
+      { id: 7, name: "Hexetra Digital Solutions", cat: "Web & Branding", stack: "hexetra.online (formerly Digi Dreamers) — Branding, web development & hosting work", status: "In Progress" },
+      { id: 8, name: "Zella Builders Website Maintenance", cat: "Web Maintenance", stack: "zellabuilders.in — WordPress, Kubio builder, hosting renewal research & troubleshooting", status: "In Progress" },
+      { id: 9, name: "Chathalloor Unit Membership System", cat: "Web / Forms", stack: "Mobile-friendly membership collection, photo upload & password-protected dashboard", status: "In Progress" },
+      { id: 10, name: "TransitBridge — Kerala Bus Tracking App", cat: "Mobile Prototype", stack: "Flutter, Firebase, Cloud Firestore — Bus timing/route prototype (live GPS & alerts planned)", status: "Prototype" },
+      { id: 11, name: "CastUrVote — Online Voting Project", cat: "Web Project", stack: "Web stack, MySQL, QR loading & server deployment troubleshooting", status: "Prototype" },
+      { id: 12, name: "CampusCore — Campus Management", cat: "Web Project", stack: "Web & MySQL database identification, administration & local server troubleshooting", status: "Prototype" },
+      { id: 13, name: "Sahithyolsav 2026 Digital Support", cat: "Event Tech", stack: "Competition schedule preparation, Malayalam posters & competition rules website prototype", status: "Prototype" },
+      { id: 14, name: "Vulnerable Web App Assessment Selection", cat: "Academic Security", stack: "Evaluation of bWAPP, VulnBank & WackoPicko for academic vulnerability assessment planning", status: "Planned / Concept" },
+      { id: 15, name: "EventMaster — Arts & Meelad Platform", cat: "System Design", stack: "Planned stack: React, TypeScript, Node.js, Express, PostgreSQL — QR registration & live scoreboard", status: "Planned / Concept" },
+      { id: 16, name: "Digital Heist & College Cyber Event Concepts", cat: "Cyber Event Design", stack: "5-stage Digital Heist game, OSINT Detective, Bug Hunt & Cyber Escape Run event designs", status: "Planned / Concept" },
+      { id: 17, name: "Yaseen Daily — Productivity Tracker", cat: "App Concept", stack: "Planned Android habit/task tracker for study, coding & cybersecurity routines", status: "Planned / Concept" },
+      { id: 18, name: "ESP / ESP32 Hardware Exploration", cat: "Electronics", stack: "Exploratory discussions and experimentation around ESP32 connected microcontrollers", status: "Planned / Concept" }
     ];
 
     function renderVault() {
       const query = document.getElementById('vault-search').value.toLowerCase();
-      const cat = document.getElementById('vault-cat').value;
+      const statusFilter = document.getElementById('vault-status').value;
       const tbody = document.getElementById('vault-tbody');
-      tbody.innerHTML = '';
+      tbody.replaceChildren();
 
       const filtered = MASTER_PROJECTS.filter(p => {
-        const matchesCat = cat === 'ALL' || p.cat === cat;
-        const matchesQuery = p.name.toLowerCase().includes(query) || p.stack.toLowerCase().includes(query) || p.cat.toLowerCase().includes(query);
-        return matchesCat && matchesQuery;
+        const matchesStatus = statusFilter === 'ALL' || p.status === statusFilter;
+        const matchesQuery =
+          p.name.toLowerCase().includes(query) ||
+          p.stack.toLowerCase().includes(query) ||
+          p.cat.toLowerCase().includes(query);
+        return matchesStatus && matchesQuery;
       });
 
       filtered.forEach(p => {
         const tr = document.createElement('tr');
         tr.className = "hover:bg-white/[0.03] transition";
-        tr.innerHTML = `
-          <td class="py-3.5 px-4 font-mono text-slate-500">${String(p.id).padStart(2, '0')}</td>
-          <td class="py-3.5 px-4 font-display font-semibold text-white">${p.name}</td>
-          <td class="py-3.5 px-4 font-mono text-[11px] text-cyan-400">${p.cat}</td>
-          <td class="py-3.5 px-4 text-slate-300 max-w-md">${p.stack}</td>
-          <td class="py-3.5 px-4 font-mono text-[11px]"><span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded text-emerald-300">${p.status}</span></td>
-        `;
+
+        const tdId = document.createElement('td');
+        tdId.className = "py-3.5 px-4 font-mono text-slate-500";
+        tdId.textContent = String(p.id).padStart(2, '0');
+
+        const tdName = document.createElement('td');
+        tdName.className = "py-3.5 px-4 font-display font-semibold text-white";
+        tdName.textContent = p.name;
+
+        const tdCat = document.createElement('td');
+        tdCat.className = "py-3.5 px-4 font-mono text-[11px] text-cyan-400";
+        tdCat.textContent = p.cat;
+
+        const tdStack = document.createElement('td');
+        tdStack.className = "py-3.5 px-4 text-slate-300 max-w-md";
+        tdStack.textContent = p.stack;
+
+        const tdStatus = document.createElement('td');
+        tdStatus.className = "py-3.5 px-4 font-mono text-[11px]";
+        const badge = document.createElement('span');
+        badge.className = "bg-white/5 border border-white/10 px-2.5 py-1 rounded text-slate-200";
+        badge.textContent = p.status;
+        tdStatus.appendChild(badge);
+
+        tr.appendChild(tdId);
+        tr.appendChild(tdName);
+        tr.appendChild(tdCat);
+        tr.appendChild(tdStack);
+        tr.appendChild(tdStatus);
         tbody.appendChild(tr);
       });
     }
 
     renderVault();
 
-    // 6. Modal Dossier Data & Handlers
+    // 5. Modal Notes Data & Safe DOM Rendering
     const DOSSIERS = {
-      akshaya: {
-        tag: "PRIORITY_01 // PHP & MYSQL ENTERPRISE SYSTEM",
-        title: "Akshaya@Doorstep — Digital Service Centre System",
-        desc: "A comprehensive PHP/MySQL web application built to manage digital service-centre operations across both in-office visits and citizen doorstep service dispatches.",
-        bullets: [
-          "Role-based authentication for Administrators and Staff/Operators",
-          "Customer booking intake, operator assignment & real-time status tracking",
-          "Integrated ledger for service payments, income & expense transactions",
-          "Normalized MySQL schema covering users, operators, bookings, payments, notifications & audit logs",
-          "Automated database backup management deployed on Linux/Apache"
-        ],
-        stack: ["PHP", "MySQL", "JavaScript", "HTML5/CSS3", "Linux", "Apache"]
-      },
       dc2: {
-        tag: "PRIORITY_02 // OFFENSIVE PENETRATION TESTING",
-        title: "DC-2 Vulnerable Machine — Root Compromise",
-        desc: "Hands-on ethical hacking engagement against the DC-2 vulnerable machine environment from initial enumeration to full root privilege escalation.",
+        tag: "AUTHORIZED LAB // OFFENSIVE SECURITY",
+        title: "DC-2 Vulnerable Machine Penetration-Testing Lab",
+        desc: "Completed hands-on walkthrough of the intentionally vulnerable DC-2 machine in an isolated Kali Linux lab environment.",
         bullets: [
-          "Conducted host enumeration and credential discovery from Kali Linux",
-          "Bypassed restricted shell (rbash) environment to gain standard execution flow",
-          "Audited sudo permissions (sudo -l) and identified a misconfigured Git binary",
-          "Leveraged Git privilege escalation vector (GTFOBins) to spawn a root shell",
-          "Captured flag3.txt and flag4.txt and compiled a screenshot-backed pentest report"
+          "Performed initial enumeration and explored the target system shell",
+          "Worked through a restricted shell (rbash) to restore command execution",
+          "Inspected sudo privileges and identified a permitted Git executable",
+          "Used the misconfigured Git privilege in the lab to obtain root access",
+          "Retrieved flag3.txt and flag4.txt and prepared a screenshot-based lab report"
         ],
-        stack: ["Kali Linux", "Restricted Shell Escape", "Sudo Auditing", "Git Privesc", "Technical Reporting"]
+        stack: ["Kali Linux", "DC-2 Lab VM", "rbash", "Git Privilege Escalation", "Lab Report"]
       },
       sysmon: {
-        tag: "PRIORITY_03 // WINDOWS BLUE TEAM & DFIR",
+        tag: "PRACTICAL INVESTIGATION // WINDOWS EVENT LOGS",
         title: "Windows Incident Investigation with Sysmon",
-        desc: "Forensic threat-hunting analysis performed on a captured Windows event log artifact (Practice-Sysmon.evtx) to reconstruct attacker behavior.",
+        desc: "Practical investigation of Windows host telemetry using a captured Practice-Sysmon.evtx log file.",
         bullets: [
-          "Filtered high-signal Sysmon Event IDs: 1 (Process Creation), 3 (Network Connect), 11 (FileCreate), and 22 (DNSEvent)",
-          "Leveraged PowerShell scripts to parse high-volume EVTX telemetry rapidly",
-          "Inspected event payloads for anomalous executable names, parent-child process trees, and outbound URLs",
-          "Correlated DNS queries with unauthorized network connections in Event Viewer"
+          "Filtered Sysmon Event IDs 1 (Process Creation), 3 (Network Connection), 11 (File Creation), and 22 (DNS Event)",
+          "Used PowerShell to query and filter a high volume of event records efficiently",
+          "Searched event messages for suspicious executable names and outbound URLs",
+          "Correlated process and network activity using Windows Event Viewer"
         ],
-        stack: ["Windows Event Viewer", "Sysmon (EVTX)", "PowerShell", "DFIR Threat Hunting"]
-      },
-      rfid: {
-        tag: "PRIORITY_04 // EMBEDDED HARDWARE SECURITY",
-        title: "RFID-Activated Smart Door Lock System",
-        desc: "Physical access control prototype engineered on an Arduino UNO R3 (ATmega328P) combining contactless RFID verification with a keypad PIN fallback.",
-        bullets: [
-          "Interfaced MFRC522 SPI RFID reader module for UID tag authentication",
-          "Integrated 4x4 matrix keypad allowing PIN-based override entry",
-          "Configured LiquidCrystal_I2C display for real-time access prompts and status",
-          "Drove servo motor locking actuator alongside piezo buzzer and status LEDs",
-          "Resolved C/C++ library conflicts, I2C addressing, and breadboard power regulation"
-        ],
-        stack: ["Arduino UNO R3 (ATmega328P)", "Arduino C/C++", "MFRC522", "LiquidCrystal_I2C", "Servo Control"]
+        stack: ["Windows", "Sysmon (EVTX)", "PowerShell", "Event Viewer"]
       },
       splunk: {
-        tag: "PRIORITY_05 // SECURITY MONITORING & SIEM",
+        tag: "PRACTICAL LAB // SECURITY MONITORING",
         title: "Splunk SIEM Investigation Lab",
-        desc: "Practical SOC monitoring workflow focused on Splunk Enterprise administration, network binding troubleshooting, and Windows telemetry analysis.",
+        desc: "Hands-on practice configuring Splunk and investigating Windows security and Sysmon-related telemetry.",
         bullets: [
-          "Diagnosed and reconfigured Splunk server IP binding across the lab network",
-          "Ingested Windows security and Sysmon-forwarded event streams",
-          "Constructed search queries to isolate suspicious host and authentication events"
+          "Troubleshot Splunk network and IP configuration settings in the lab",
+          "Ingested Windows security and Sysmon-related event logs",
+          "Practiced querying event data to identify suspicious host activity"
         ],
-        stack: ["Splunk Enterprise", "SIEM Administration", "Windows Telemetry", "Sysmon Logs"]
+        stack: ["Splunk", "Windows Logs", "Sysmon Telemetry"]
+      },
+      rfid: {
+        tag: "HARDWARE PROJECT // ACCESS CONTROL",
+        title: "RFID-Activated Door Lock System",
+        desc: "Built an Arduino-based access-control lock combining RFID authentication, a keypad PIN override, and a physical servo lock.",
+        bullets: [
+          "Assembled Arduino UNO R3 (ATmega328P) with MFRC522 RFID reader and servo motor",
+          "Added keypad PIN override, buzzer, status LEDs, and LiquidCrystal_I2C display",
+          "Resolved Arduino wiring, I2C LCD library, and power configuration issues"
+        ],
+        stack: ["Arduino UNO R3", "C / C++", "MFRC522", "LiquidCrystal_I2C", "Servo Motor"]
+      },
+      akshaya: {
+        tag: "ACTIVE DEVELOPMENT // PHP & MYSQL",
+        title: "Akshaya@Doorstep — Service Centre Management System",
+        desc: "A full-stack PHP/MySQL web application for managing digital service-centre operations, including office visits and doorstep services.",
+        bullets: [
+          "Implemented Admin and Staff/Operator authentication workflows",
+          "Built customer booking management, operator assignment, and service status tracking",
+          "Added payment tracking, income/expense records, and staff dashboards",
+          "Designed MySQL tables for users, operators, bookings, payments, notifications, and audit logs, plus backup tools"
+        ],
+        stack: ["PHP", "MySQL", "HTML/CSS", "JavaScript", "Linux", "Apache"]
       },
       transit: {
-        tag: "PRIORITY_06 // MOBILE TRANSIT ARCHITECTURE",
-        title: "TransitBridge — Kerala Bus Tracking App",
-        desc: "Public transport application built to simplify bus travel across Kerala with real-time route discovery and station arrival visibility.",
+        tag: "PROTOTYPE WORK // FLUTTER & FIREBASE",
+        title: "TransitBridge — Kerala Bus Tracking Application",
+        desc: "A public-transport application prototype focused on making bus route and timing lookup easier in Kerala.",
         bullets: [
-          "Engineered cross-platform mobile interface using Flutter",
-          "Connected Cloud Firestore & Firebase backend for live route and timing state",
-          "Integrated Google Maps SDK concepts for live vehicle location tracking",
-          "Designed passenger arrival notification workflows"
+          "Built prototype mobile screens in Flutter backed by Firebase and Cloud Firestore",
+          "Structured bus route search and timing/arrival lookup workflows",
+          "Explored Google Maps integration and live tracking/notification concepts"
         ],
-        stack: ["Flutter", "Firebase", "Cloud Firestore", "Google Maps API"]
-      },
-      acpia: {
-        tag: "MISSION_07 // HAC'KP 2026 (KERALA POLICE CYBERDOME)",
-        title: "ACPIA Sentinel — AI Investigation Assistant",
-        desc: "AI-powered child protection investigation assistant platform developed and pitched during the regional round of Hac'KP 2026 at IIT Palakkad.",
-        bullets: [
-          "Architected an investigator-facing dashboard for rapid digital evidence triage",
-          "Designed AI-assisted workflows aligned with law enforcement protocols",
-          "Presented at the IIT Palakkad regional pitching round hosted by Kerala Police Cyberdome"
-        ],
-        stack: ["AI Investigation", "Cyber Defense", "Law Enforcement Tech"]
-      },
-      eventmaster: {
-        tag: "MISSION_08 // COMPETITION MANAGEMENT SAAS",
-        title: "EventMaster — Arts & Meelad Festival Platform",
-        desc: "End-to-end digital competition management system tailored for Kerala Arts and Meelad festivals.",
-        bullets: [
-          "Multi-school & contestant registration with QR-based check-in concepts",
-          "Real-time judge scoring calculation, tabulation, and live public scoreboards",
-          "Automated certificate generation and comprehensive event reporting",
-          "Designed around a modern React, TypeScript, Node.js, Express & PostgreSQL stack"
-        ],
-        stack: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "JWT"]
-      },
-      webappsec: {
-        tag: "MISSION_09 // WEB APPLICATION SECURITY",
-        title: "Vulnerable Web Application Security Assessment",
-        desc: "Structured evaluation and security assessment planning across intentionally vulnerable web platforms.",
-        bullets: [
-          "Benchmarked bWAPP, VulnBank, and WackoPicko for vulnerability depth",
-          "Analyzed coverage across SQLi, XSS, authentication flaws, and logic bugs",
-          "Structured academic security assessment methodology based on industry pentest reports"
-        ],
-        stack: ["bWAPP", "VulnBank", "WackoPicko", "OWASP Testing"]
-      },
-      heist: {
-        tag: "MISSION_10 // GAMIFIED CYBERSECURITY EVENTS",
-        title: "Digital Heist & College Cybersecurity Suite",
-        desc: "Interactive multi-stage cybersecurity competitions designed to test logic, code auditing, OSINT, and incident response under time pressure.",
-        bullets: [
-          "Digital Heist 5-Stage Progression: Logic Breaker -> Code Cracker -> Threat Detector -> QR Hunt -> Final Vault",
-          "Full event suite: Cyber Heist, Cyber Escape Run, OSINT Detective, Bug Hunt, Code vs Hacker & Cyber Speed Run",
-          "Tailored deployment plans for 5–6 member technical committees across Ubuntu and Windows lab machines"
-        ],
-        stack: ["CTF Design", "OSINT Detective", "Cryptographic Puzzles", "Ubuntu / Windows"]
-      },
-      casturvote: {
-        tag: "MISSION_11 // CIVIC & CAMPUS SYSTEMS",
-        title: "CastUrVote & CampusCore Platforms",
-        desc: "Web-based civic voting and campus administration projects focused on database integrity and QR-authenticated workflows.",
-        bullets: [
-          "CastUrVote: QR-enabled voter verification, MySQL schema management, and Vercel/web deployment debugging",
-          "CampusCore: Campus management database administration and local server environment configuration"
-        ],
-        stack: ["Web Stack", "MySQL", "QR Verification", "Vercel / Apache"]
-      },
-      hexetra: {
-        tag: "MISSION_12 // DIGITAL AGENCY & CLIENT ENGINEERING",
-        title: "Hexetra Digital Solutions & Client Deployments",
-        desc: "Founder & CEO of Hexetra (rebranded from Digi Dreamers) in Edavanna, Kerala — delivering software engineering, branding, and web infrastructure.",
-        bullets: [
-          "Hexetra (hexetra.online): Corporate identity, visual design system, and digital consultancy",
-          "Zella Builders (zellabuilders.in): WordPress & Kubio engineering, hosting architecture & renewal management",
-          "Chathalloor Unit Portal: Mobile-first membership intake with photo uploads and password-protected admin dashboard",
-          "Sahithyolsav 2026: Digital schedule systems, Malayalam creatives, and competition rulebook web prototype"
-        ],
-        stack: ["hexetra.online", "zellabuilders.in", "WordPress / Kubio", "Web Portals"]
+        stack: ["Flutter", "Firebase", "Cloud Firestore", "Google Maps Concept"]
       }
     };
 
@@ -1198,10 +1139,21 @@
       document.getElementById('modal-desc').textContent = d.desc;
 
       const ul = document.getElementById('modal-bullets');
-      ul.innerHTML = d.bullets.map(b => `<li>${b}</li>`).join('');
+      ul.replaceChildren();
+      d.bullets.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        ul.appendChild(li);
+      });
 
       const st = document.getElementById('modal-stack');
-      st.innerHTML = d.stack.map(s => `<span class="font-mono text-[10px] bg-cyan-400/10 text-cyan-300 border border-cyan-400/25 px-2.5 py-1 rounded">${s}</span>`).join('');
+      st.replaceChildren();
+      d.stack.forEach(tag => {
+        const span = document.createElement('span');
+        span.className = "font-mono text-[10px] bg-cyan-400/10 text-cyan-300 border border-cyan-400/25 px-2.5 py-1 rounded";
+        span.textContent = tag;
+        st.appendChild(span);
+      });
 
       document.getElementById('dossier-modal').classList.remove('hidden');
     }
@@ -1214,14 +1166,42 @@
       if (e.key === 'Escape') closeModal();
     });
 
-    function copyEmail() {
-      navigator.clipboard.writeText('yaseen@yaseentk.in');
+    // 6. Verified Clipboard Copy with Proper Async/Fallback Error Handling
+    async function copyEmail() {
+      const email = 'yaseen@yaseentk.in';
       const btn = document.getElementById('copy-btn');
-      btn.textContent = 'COPIED TO CLIPBOARD ✓';
-      btn.classList.add('text-emerald-400', 'border-emerald-400/40');
+      let copied = false;
+
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(email);
+          copied = true;
+        } else {
+          const textArea = document.createElement('textarea');
+          textArea.value = email;
+          textArea.style.position = 'fixed';
+          textArea.style.opacity = '0';
+          document.body.appendChild(textArea);
+          textArea.focus();
+          textArea.select();
+          copied = document.execCommand('copy');
+          document.body.removeChild(textArea);
+        }
+      } catch (err) {
+        copied = false;
+      }
+
+      if (copied) {
+        btn.textContent = 'EMAIL COPIED ✓';
+        btn.classList.add('text-emerald-400', 'border-emerald-400/40');
+      } else {
+        btn.textContent = 'COPY FAILED — USE MAILTO';
+        btn.classList.add('text-rose-400', 'border-rose-400/40');
+      }
+
       setTimeout(() => {
         btn.textContent = 'COPY EMAIL';
-        btn.classList.remove('text-emerald-400', 'border-emerald-400/40');
+        btn.classList.remove('text-emerald-400', 'border-emerald-400/40', 'text-rose-400', 'border-rose-400/40');
       }, 2500);
     }
   </script>
